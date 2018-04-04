@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua.user.mapper.SUserMapper">
+	<resultMap type="com.gyguohua.model.user.SUser" id="sUserResultMap">
+		<result property="userType" column="user_type" />
+		<result property="createOrg" column="create_org" />
+		<result property="lastUpdateUser" column="last_update_user" />
+		<result property="lastUpdateDate" column="last_update_date" />
+		<result property="lastUpdatePlat" column="last_update_plat" />
+		<result property="lastUpdateOrg" column="last_update_org" />
+		<result property="synchronizedDate" column="synchronized_date" />
+		<result property="cleanDate" column="clean_date" />
+		<result property="describe" column="describe" />
+		<result property="userId" column="user_id" />
+		<result property="userCode" column="user_code" />
+		<result property="userName" column="user_name" />
+		<result property="userPassword" column="user_password" />
+		<result property="userPlat" column="user_plat" />
+		<result property="platName" column="plat_name" />
+		<result property="userPart" column="user_part" />
+		<result property="partName" column="part_name" />
+		<result property="salerFlag" column="saler_flag" />
+		<result property="agentFlag" column="agent_flag" />
+		<result property="enableFlag" column="enable_flag" />
+		<result property="userOrgid" column="user_orgid" />
+		<result property="userTelephone" column="user_telephone" />
+		<result property="userHandset" column="user_handset" />
+		<result property="userEmail" column="user_email" />
+		<result property="userDesc" column="user_desc" />
+		<result property="lastLoginPlat" column="last_login_plat" />
+		<result property="sortLevel" column="sort_level" />
+		<result property="createUser" column="create_user" />
+		<result property="createDate" column="create_date" />
+		<result property="createPlat" column="create_plat" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		user_type,
+		create_org,
+		last_update_user,
+		last_update_date,
+		last_update_plat,
+		last_update_org,
+		synchronized_date,
+		clean_date,
+		describe,
+		user_id,
+		user_code,
+		user_name,
+		user_password,
+		user_plat,
+		plat_name,
+		user_part,
+		part_name,
+		saler_flag,
+		agent_flag,
+		enable_flag,
+		user_orgid,
+		user_telephone,
+		user_handset,
+		user_email,
+		user_desc,
+		last_login_plat,
+		sort_level,
+		create_user,
+		create_date,
+		create_plat
+    </sql>
+	<sql id="entity_properties">
+		#{userType,jdbcType=UNDEFINED},
+		#{createOrg,jdbcType=UNDEFINED},
+		#{lastUpdateUser,jdbcType=UNDEFINED},
+		#{lastUpdateDate,jdbcType=UNDEFINED},
+		#{lastUpdatePlat,jdbcType=UNDEFINED},
+		#{lastUpdateOrg,jdbcType=UNDEFINED},
+		#{synchronizedDate,jdbcType=UNDEFINED},
+		#{cleanDate,jdbcType=UNDEFINED},
+		#{describe,jdbcType=UNDEFINED},
+		#{userId,jdbcType=UNDEFINED},
+		#{userCode,jdbcType=UNDEFINED},
+		#{userName,jdbcType=UNDEFINED},
+		#{userPassword,jdbcType=UNDEFINED},
+		#{userPlat,jdbcType=UNDEFINED},
+		#{platName,jdbcType=UNDEFINED},
+		#{userPart,jdbcType=UNDEFINED},
+		#{partName,jdbcType=UNDEFINED},
+		#{salerFlag,jdbcType=UNDEFINED},
+		#{agentFlag,jdbcType=UNDEFINED},
+		#{enableFlag,jdbcType=UNDEFINED},
+		#{userOrgid,jdbcType=UNDEFINED},
+		#{userTelephone,jdbcType=UNDEFINED},
+		#{userHandset,jdbcType=UNDEFINED},
+		#{userEmail,jdbcType=UNDEFINED},
+		#{userDesc,jdbcType=UNDEFINED},
+		#{lastLoginPlat,jdbcType=UNDEFINED},
+		#{sortLevel,jdbcType=UNDEFINED},
+		#{createUser,jdbcType=UNDEFINED},
+		#{createDate,jdbcType=UNDEFINED},
+		#{createPlat,jdbcType=UNDEFINED}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.userType,jdbcType=UNDEFINED},
+		#{item.createOrg,jdbcType=UNDEFINED},
+		#{item.lastUpdateUser,jdbcType=UNDEFINED},
+		#{item.lastUpdateDate,jdbcType=UNDEFINED},
+		#{item.lastUpdatePlat,jdbcType=UNDEFINED},
+		#{item.lastUpdateOrg,jdbcType=UNDEFINED},
+		#{item.synchronizedDate,jdbcType=UNDEFINED},
+		#{item.cleanDate,jdbcType=UNDEFINED},
+		#{item.describe,jdbcType=UNDEFINED},
+		#{item.userId,jdbcType=UNDEFINED},
+		#{item.userCode,jdbcType=UNDEFINED},
+		#{item.userName,jdbcType=UNDEFINED},
+		#{item.userPassword,jdbcType=UNDEFINED},
+		#{item.userPlat,jdbcType=UNDEFINED},
+		#{item.platName,jdbcType=UNDEFINED},
+		#{item.userPart,jdbcType=UNDEFINED},
+		#{item.partName,jdbcType=UNDEFINED},
+		#{item.salerFlag,jdbcType=UNDEFINED},
+		#{item.agentFlag,jdbcType=UNDEFINED},
+		#{item.enableFlag,jdbcType=UNDEFINED},
+		#{item.userOrgid,jdbcType=UNDEFINED},
+		#{item.userTelephone,jdbcType=UNDEFINED},
+		#{item.userHandset,jdbcType=UNDEFINED},
+		#{item.userEmail,jdbcType=UNDEFINED},
+		#{item.userDesc,jdbcType=UNDEFINED},
+		#{item.lastLoginPlat,jdbcType=UNDEFINED},
+		#{item.sortLevel,jdbcType=UNDEFINED},
+		#{item.createUser,jdbcType=UNDEFINED},
+		#{item.createDate,jdbcType=UNDEFINED},
+		#{item.createPlat,jdbcType=UNDEFINED}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		create_org,
+		last_update_user,
+		last_update_date,
+		last_update_plat,
+		last_update_org,
+		synchronized_date,
+		clean_date,
+		describe,
+		user_id,
+		user_code,
+		user_name,
+		user_password,
+		user_plat,
+		plat_name,
+		user_part,
+		part_name,
+		saler_flag,
+		agent_flag,
+		enable_flag,
+		user_orgid,
+		user_telephone,
+		user_handset,
+		user_email,
+		user_desc,
+		last_login_plat,
+		sort_level,
+		create_user,
+		create_date,
+		create_plat
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{createOrg,jdbcType=UNDEFINED},
+		#{lastUpdateUser,jdbcType=UNDEFINED},
+		#{lastUpdateDate,jdbcType=UNDEFINED},
+		#{lastUpdatePlat,jdbcType=UNDEFINED},
+		#{lastUpdateOrg,jdbcType=UNDEFINED},
+		#{synchronizedDate,jdbcType=UNDEFINED},
+		#{cleanDate,jdbcType=UNDEFINED},
+		#{describe,jdbcType=UNDEFINED},
+		#{userId,jdbcType=UNDEFINED},
+		#{userCode,jdbcType=UNDEFINED},
+		#{userName,jdbcType=UNDEFINED},
+		#{userPassword,jdbcType=UNDEFINED},
+		#{userPlat,jdbcType=UNDEFINED},
+		#{platName,jdbcType=UNDEFINED},
+		#{userPart,jdbcType=UNDEFINED},
+		#{partName,jdbcType=UNDEFINED},
+		#{salerFlag,jdbcType=UNDEFINED},
+		#{agentFlag,jdbcType=UNDEFINED},
+		#{enableFlag,jdbcType=UNDEFINED},
+		#{userOrgid,jdbcType=UNDEFINED},
+		#{userTelephone,jdbcType=UNDEFINED},
+		#{userHandset,jdbcType=UNDEFINED},
+		#{userEmail,jdbcType=UNDEFINED},
+		#{userDesc,jdbcType=UNDEFINED},
+		#{lastLoginPlat,jdbcType=UNDEFINED},
+		#{sortLevel,jdbcType=UNDEFINED},
+		#{createUser,jdbcType=UNDEFINED},
+		#{createDate,jdbcType=UNDEFINED},
+		#{createPlat,jdbcType=UNDEFINED}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.createOrg,jdbcType=UNDEFINED},
+		#{item.lastUpdateUser,jdbcType=UNDEFINED},
+		#{item.lastUpdateDate,jdbcType=UNDEFINED},
+		#{item.lastUpdatePlat,jdbcType=UNDEFINED},
+		#{item.lastUpdateOrg,jdbcType=UNDEFINED},
+		#{item.synchronizedDate,jdbcType=UNDEFINED},
+		#{item.cleanDate,jdbcType=UNDEFINED},
+		#{item.describe,jdbcType=UNDEFINED},
+		#{item.userId,jdbcType=UNDEFINED},
+		#{item.userCode,jdbcType=UNDEFINED},
+		#{item.userName,jdbcType=UNDEFINED},
+		#{item.userPassword,jdbcType=UNDEFINED},
+		#{item.userPlat,jdbcType=UNDEFINED},
+		#{item.platName,jdbcType=UNDEFINED},
+		#{item.userPart,jdbcType=UNDEFINED},
+		#{item.partName,jdbcType=UNDEFINED},
+		#{item.salerFlag,jdbcType=UNDEFINED},
+		#{item.agentFlag,jdbcType=UNDEFINED},
+		#{item.enableFlag,jdbcType=UNDEFINED},
+		#{item.userOrgid,jdbcType=UNDEFINED},
+		#{item.userTelephone,jdbcType=UNDEFINED},
+		#{item.userHandset,jdbcType=UNDEFINED},
+		#{item.userEmail,jdbcType=UNDEFINED},
+		#{item.userDesc,jdbcType=UNDEFINED},
+		#{item.lastLoginPlat,jdbcType=UNDEFINED},
+		#{item.sortLevel,jdbcType=UNDEFINED},
+		#{item.createUser,jdbcType=UNDEFINED},
+		#{item.createDate,jdbcType=UNDEFINED},
+		#{item.createPlat,jdbcType=UNDEFINED}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model.user.SUser" useGeneratedKeys="true" keyProperty="id">
+		insert into s_user( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into s_user( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from s_user
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from s_user
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model.user.SUser">
+		update s_user 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="createOrg != null and createOrg != ''">create_org = #{createOrg},</if>
+			<if test="lastUpdateUser != null and lastUpdateUser != ''">last_update_user = #{lastUpdateUser},</if>
+			<if test="lastUpdateDate != null and lastUpdateDate != ''">last_update_date = #{lastUpdateDate},</if>
+			<if test="lastUpdatePlat != null and lastUpdatePlat != ''">last_update_plat = #{lastUpdatePlat},</if>
+			<if test="lastUpdateOrg != null and lastUpdateOrg != ''">last_update_org = #{lastUpdateOrg},</if>
+			<if test="synchronizedDate != null and synchronizedDate != ''">synchronized_date = #{synchronizedDate},</if>
+			<if test="cleanDate != null and cleanDate != ''">clean_date = #{cleanDate},</if>
+			<if test="describe != null and describe != ''">describe = #{describe},</if>
+			<if test="userId != null and userId != ''">user_id = #{userId},</if>
+			<if test="userCode != null and userCode != ''">user_code = #{userCode},</if>
+			<if test="userName != null and userName != ''">user_name = #{userName},</if>
+			<if test="userPassword != null and userPassword != ''">user_password = #{userPassword},</if>
+			<if test="userPlat != null and userPlat != ''">user_plat = #{userPlat},</if>
+			<if test="platName != null and platName != ''">plat_name = #{platName},</if>
+			<if test="userPart != null and userPart != ''">user_part = #{userPart},</if>
+			<if test="partName != null and partName != ''">part_name = #{partName},</if>
+			<if test="salerFlag != null and salerFlag != ''">saler_flag = #{salerFlag},</if>
+			<if test="agentFlag != null and agentFlag != ''">agent_flag = #{agentFlag},</if>
+			<if test="enableFlag != null and enableFlag != ''">enable_flag = #{enableFlag},</if>
+			<if test="userOrgid != null and userOrgid != ''">user_orgid = #{userOrgid},</if>
+			<if test="userTelephone != null and userTelephone != ''">user_telephone = #{userTelephone},</if>
+			<if test="userHandset != null and userHandset != ''">user_handset = #{userHandset},</if>
+			<if test="userEmail != null and userEmail != ''">user_email = #{userEmail},</if>
+			<if test="userDesc != null and userDesc != ''">user_desc = #{userDesc},</if>
+			<if test="lastLoginPlat != null and lastLoginPlat != ''">last_login_plat = #{lastLoginPlat},</if>
+			<if test="sortLevel != null and sortLevel != ''">sort_level = #{sortLevel},</if>
+			<if test="createUser != null and createUser != ''">create_user = #{createUser},</if>
+			<if test="createDate != null and createDate != ''">create_date = #{createDate},</if>
+			<if test="createPlat != null and createPlat != ''">create_plat = #{createPlat},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="sUserResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from s_user
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="createOrg != null and createOrg != ''">and create_org = #{createOrg}</if>
+			<if test="lastUpdateUser != null and lastUpdateUser != ''">and last_update_user = #{lastUpdateUser}</if>
+			<if test="lastUpdateDate != null and lastUpdateDate != ''">and last_update_date = #{lastUpdateDate}</if>
+			<if test="lastUpdatePlat != null and lastUpdatePlat != ''">and last_update_plat = #{lastUpdatePlat}</if>
+			<if test="lastUpdateOrg != null and lastUpdateOrg != ''">and last_update_org = #{lastUpdateOrg}</if>
+			<if test="synchronizedDate != null and synchronizedDate != ''">and synchronized_date = #{synchronizedDate}</if>
+			<if test="cleanDate != null and cleanDate != ''">and clean_date = #{cleanDate}</if>
+			<if test="describe != null and describe != ''">and describe = #{describe}</if>
+			<if test="userId != null and userId != ''">and user_id = #{userId}</if>
+			<if test="userCode != null and userCode != ''">and user_code = #{userCode}</if>
+			<if test="userName != null and userName != ''">and user_name = #{userName}</if>
+			<if test="userPassword != null and userPassword != ''">and user_password = #{userPassword}</if>
+			<if test="userPlat != null and userPlat != ''">and user_plat = #{userPlat}</if>
+			<if test="platName != null and platName != ''">and plat_name = #{platName}</if>
+			<if test="userPart != null and userPart != ''">and user_part = #{userPart}</if>
+			<if test="partName != null and partName != ''">and part_name = #{partName}</if>
+			<if test="salerFlag != null and salerFlag != ''">and saler_flag = #{salerFlag}</if>
+			<if test="agentFlag != null and agentFlag != ''">and agent_flag = #{agentFlag}</if>
+			<if test="enableFlag != null and enableFlag != ''">and enable_flag = #{enableFlag}</if>
+			<if test="userOrgid != null and userOrgid != ''">and user_orgid = #{userOrgid}</if>
+			<if test="userTelephone != null and userTelephone != ''">and user_telephone = #{userTelephone}</if>
+			<if test="userHandset != null and userHandset != ''">and user_handset = #{userHandset}</if>
+			<if test="userEmail != null and userEmail != ''">and user_email = #{userEmail}</if>
+			<if test="userDesc != null and userDesc != ''">and user_desc = #{userDesc}</if>
+			<if test="lastLoginPlat != null and lastLoginPlat != ''">and last_login_plat = #{lastLoginPlat}</if>
+			<if test="sortLevel != null and sortLevel != ''">and sort_level = #{sortLevel}</if>
+			<if test="createUser != null and createUser != ''">and create_user = #{createUser}</if>
+			<if test="createDate != null and createDate != ''">and create_date = #{createDate}</if>
+			<if test="createPlat != null and createPlat != ''">and create_plat = #{createPlat}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="sUserResultMap" parameterType="com.gyguohua.model.user.SUser">
+		select <include refid="table_columns" />
+		from s_user
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

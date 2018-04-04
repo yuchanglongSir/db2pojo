@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua..mapper.VStandardProductMapper">
+	<resultMap type="com.gyguohua.model..VStandardProduct" id="vStandardProductResultMap">
+		<result property="mfAbbr" column="mf_abbr" />
+		<result property="mfName" column="mf_name" />
+		<result property="unit" column="unit" />
+		<result property="wrapName" column="wrap_name" />
+		<result property="doseageFormName" column="doseage_form_name" />
+		<result property="qualityName" column="quality_name" />
+		<result property="searchMf" column="search_mf" />
+		<result property="searchProduct" column="search_product" />
+		<result property="productId" column="product_id" />
+		<result property="medicalName" column="medical_name" />
+		<result property="tradeName" column="trade_name" />
+		<result property="productCode" column="product_code" />
+		<result property="standardSpec" column="standard_spec" />
+		<result property="spec" column="spec" />
+		<result property="mfId" column="mf_id" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		mf_abbr,
+		mf_name,
+		unit,
+		wrap_name,
+		doseage_form_name,
+		quality_name,
+		search_mf,
+		search_product,
+		product_id,
+		medical_name,
+		trade_name,
+		product_code,
+		standard_spec,
+		spec,
+		mf_id
+    </sql>
+	<sql id="entity_properties">
+		#{mfAbbr,jdbcType=VARCHAR},
+		#{mfName,jdbcType=VARCHAR},
+		#{unit,jdbcType=VARCHAR},
+		#{wrapName,jdbcType=VARCHAR},
+		#{doseageFormName,jdbcType=VARCHAR},
+		#{qualityName,jdbcType=VARCHAR},
+		#{searchMf,jdbcType=VARCHAR},
+		#{searchProduct,jdbcType=VARCHAR},
+		#{productId,jdbcType=CHAR},
+		#{medicalName,jdbcType=VARCHAR},
+		#{tradeName,jdbcType=VARCHAR},
+		#{productCode,jdbcType=VARCHAR},
+		#{standardSpec,jdbcType=VARCHAR},
+		#{spec,jdbcType=VARCHAR},
+		#{mfId,jdbcType=CHAR}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.mfAbbr,jdbcType=VARCHAR},
+		#{item.mfName,jdbcType=VARCHAR},
+		#{item.unit,jdbcType=VARCHAR},
+		#{item.wrapName,jdbcType=VARCHAR},
+		#{item.doseageFormName,jdbcType=VARCHAR},
+		#{item.qualityName,jdbcType=VARCHAR},
+		#{item.searchMf,jdbcType=VARCHAR},
+		#{item.searchProduct,jdbcType=VARCHAR},
+		#{item.productId,jdbcType=CHAR},
+		#{item.medicalName,jdbcType=VARCHAR},
+		#{item.tradeName,jdbcType=VARCHAR},
+		#{item.productCode,jdbcType=VARCHAR},
+		#{item.standardSpec,jdbcType=VARCHAR},
+		#{item.spec,jdbcType=VARCHAR},
+		#{item.mfId,jdbcType=CHAR}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		mf_name,
+		unit,
+		wrap_name,
+		doseage_form_name,
+		quality_name,
+		search_mf,
+		search_product,
+		product_id,
+		medical_name,
+		trade_name,
+		product_code,
+		standard_spec,
+		spec,
+		mf_id
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{mfName,jdbcType=VARCHAR},
+		#{unit,jdbcType=VARCHAR},
+		#{wrapName,jdbcType=VARCHAR},
+		#{doseageFormName,jdbcType=VARCHAR},
+		#{qualityName,jdbcType=VARCHAR},
+		#{searchMf,jdbcType=VARCHAR},
+		#{searchProduct,jdbcType=VARCHAR},
+		#{productId,jdbcType=CHAR},
+		#{medicalName,jdbcType=VARCHAR},
+		#{tradeName,jdbcType=VARCHAR},
+		#{productCode,jdbcType=VARCHAR},
+		#{standardSpec,jdbcType=VARCHAR},
+		#{spec,jdbcType=VARCHAR},
+		#{mfId,jdbcType=CHAR}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.mfName,jdbcType=VARCHAR},
+		#{item.unit,jdbcType=VARCHAR},
+		#{item.wrapName,jdbcType=VARCHAR},
+		#{item.doseageFormName,jdbcType=VARCHAR},
+		#{item.qualityName,jdbcType=VARCHAR},
+		#{item.searchMf,jdbcType=VARCHAR},
+		#{item.searchProduct,jdbcType=VARCHAR},
+		#{item.productId,jdbcType=CHAR},
+		#{item.medicalName,jdbcType=VARCHAR},
+		#{item.tradeName,jdbcType=VARCHAR},
+		#{item.productCode,jdbcType=VARCHAR},
+		#{item.standardSpec,jdbcType=VARCHAR},
+		#{item.spec,jdbcType=VARCHAR},
+		#{item.mfId,jdbcType=CHAR}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model..VStandardProduct" useGeneratedKeys="true" keyProperty="id">
+		insert into v_standard_product( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into v_standard_product( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from v_standard_product
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from v_standard_product
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model..VStandardProduct">
+		update v_standard_product 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="mfName != null and mfName != ''">mf_name = #{mfName},</if>
+			<if test="unit != null and unit != ''">unit = #{unit},</if>
+			<if test="wrapName != null and wrapName != ''">wrap_name = #{wrapName},</if>
+			<if test="doseageFormName != null and doseageFormName != ''">doseage_form_name = #{doseageFormName},</if>
+			<if test="qualityName != null and qualityName != ''">quality_name = #{qualityName},</if>
+			<if test="searchMf != null and searchMf != ''">search_mf = #{searchMf},</if>
+			<if test="searchProduct != null and searchProduct != ''">search_product = #{searchProduct},</if>
+			<if test="productId != null and productId != ''">product_id = #{productId},</if>
+			<if test="medicalName != null and medicalName != ''">medical_name = #{medicalName},</if>
+			<if test="tradeName != null and tradeName != ''">trade_name = #{tradeName},</if>
+			<if test="productCode != null and productCode != ''">product_code = #{productCode},</if>
+			<if test="standardSpec != null and standardSpec != ''">standard_spec = #{standardSpec},</if>
+			<if test="spec != null and spec != ''">spec = #{spec},</if>
+			<if test="mfId != null and mfId != ''">mf_id = #{mfId},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="vStandardProductResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from v_standard_product
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="mfName != null and mfName != ''">and mf_name = #{mfName}</if>
+			<if test="unit != null and unit != ''">and unit = #{unit}</if>
+			<if test="wrapName != null and wrapName != ''">and wrap_name = #{wrapName}</if>
+			<if test="doseageFormName != null and doseageFormName != ''">and doseage_form_name = #{doseageFormName}</if>
+			<if test="qualityName != null and qualityName != ''">and quality_name = #{qualityName}</if>
+			<if test="searchMf != null and searchMf != ''">and search_mf = #{searchMf}</if>
+			<if test="searchProduct != null and searchProduct != ''">and search_product = #{searchProduct}</if>
+			<if test="productId != null and productId != ''">and product_id = #{productId}</if>
+			<if test="medicalName != null and medicalName != ''">and medical_name = #{medicalName}</if>
+			<if test="tradeName != null and tradeName != ''">and trade_name = #{tradeName}</if>
+			<if test="productCode != null and productCode != ''">and product_code = #{productCode}</if>
+			<if test="standardSpec != null and standardSpec != ''">and standard_spec = #{standardSpec}</if>
+			<if test="spec != null and spec != ''">and spec = #{spec}</if>
+			<if test="mfId != null and mfId != ''">and mf_id = #{mfId}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="vStandardProductResultMap" parameterType="com.gyguohua.model..VStandardProduct">
+		select <include refid="table_columns" />
+		from v_standard_product
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

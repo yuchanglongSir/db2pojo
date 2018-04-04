@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua..mapper.CatPharmacologyGradeAllMapper">
+	<resultMap type="com.gyguohua.model..CatPharmacologyGradeAll" id="catPharmacologyGradeAllResultMap">
+		<result property="name4" column="name4" />
+		<result property="drugUseId" column="drug_use_id" />
+		<result property="id1" column="id1" />
+		<result property="id2" column="id2" />
+		<result property="id3" column="id3" />
+		<result property="id4" column="id4" />
+		<result property="name1" column="name1" />
+		<result property="name2" column="name2" />
+		<result property="name3" column="name3" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		name4,
+		drug_use_id,
+		id1,
+		id2,
+		id3,
+		id4,
+		name1,
+		name2,
+		name3
+    </sql>
+	<sql id="entity_properties">
+		#{name4,jdbcType=UNDEFINED},
+		#{drugUseId,jdbcType=UNDEFINED},
+		#{id1,jdbcType=UNDEFINED},
+		#{id2,jdbcType=UNDEFINED},
+		#{id3,jdbcType=UNDEFINED},
+		#{id4,jdbcType=UNDEFINED},
+		#{name1,jdbcType=UNDEFINED},
+		#{name2,jdbcType=UNDEFINED},
+		#{name3,jdbcType=UNDEFINED}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.name4,jdbcType=UNDEFINED},
+		#{item.drugUseId,jdbcType=UNDEFINED},
+		#{item.id1,jdbcType=UNDEFINED},
+		#{item.id2,jdbcType=UNDEFINED},
+		#{item.id3,jdbcType=UNDEFINED},
+		#{item.id4,jdbcType=UNDEFINED},
+		#{item.name1,jdbcType=UNDEFINED},
+		#{item.name2,jdbcType=UNDEFINED},
+		#{item.name3,jdbcType=UNDEFINED}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		drug_use_id,
+		id1,
+		id2,
+		id3,
+		id4,
+		name1,
+		name2,
+		name3
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{drugUseId,jdbcType=UNDEFINED},
+		#{id1,jdbcType=UNDEFINED},
+		#{id2,jdbcType=UNDEFINED},
+		#{id3,jdbcType=UNDEFINED},
+		#{id4,jdbcType=UNDEFINED},
+		#{name1,jdbcType=UNDEFINED},
+		#{name2,jdbcType=UNDEFINED},
+		#{name3,jdbcType=UNDEFINED}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.drugUseId,jdbcType=UNDEFINED},
+		#{item.id1,jdbcType=UNDEFINED},
+		#{item.id2,jdbcType=UNDEFINED},
+		#{item.id3,jdbcType=UNDEFINED},
+		#{item.id4,jdbcType=UNDEFINED},
+		#{item.name1,jdbcType=UNDEFINED},
+		#{item.name2,jdbcType=UNDEFINED},
+		#{item.name3,jdbcType=UNDEFINED}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model..CatPharmacologyGradeAll" useGeneratedKeys="true" keyProperty="id">
+		insert into cat_pharmacology_grade_all( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into cat_pharmacology_grade_all( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from cat_pharmacology_grade_all
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from cat_pharmacology_grade_all
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model..CatPharmacologyGradeAll">
+		update cat_pharmacology_grade_all 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="drugUseId != null and drugUseId != ''">drug_use_id = #{drugUseId},</if>
+			<if test="id1 != null and id1 != ''">id1 = #{id1},</if>
+			<if test="id2 != null and id2 != ''">id2 = #{id2},</if>
+			<if test="id3 != null and id3 != ''">id3 = #{id3},</if>
+			<if test="id4 != null and id4 != ''">id4 = #{id4},</if>
+			<if test="name1 != null and name1 != ''">name1 = #{name1},</if>
+			<if test="name2 != null and name2 != ''">name2 = #{name2},</if>
+			<if test="name3 != null and name3 != ''">name3 = #{name3},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="catPharmacologyGradeAllResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from cat_pharmacology_grade_all
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="drugUseId != null and drugUseId != ''">and drug_use_id = #{drugUseId}</if>
+			<if test="id1 != null and id1 != ''">and id1 = #{id1}</if>
+			<if test="id2 != null and id2 != ''">and id2 = #{id2}</if>
+			<if test="id3 != null and id3 != ''">and id3 = #{id3}</if>
+			<if test="id4 != null and id4 != ''">and id4 = #{id4}</if>
+			<if test="name1 != null and name1 != ''">and name1 = #{name1}</if>
+			<if test="name2 != null and name2 != ''">and name2 = #{name2}</if>
+			<if test="name3 != null and name3 != ''">and name3 = #{name3}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="catPharmacologyGradeAllResultMap" parameterType="com.gyguohua.model..CatPharmacologyGradeAll">
+		select <include refid="table_columns" />
+		from cat_pharmacology_grade_all
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua..mapper.VHealthDirectMapper">
+	<resultMap type="com.gyguohua.model..VHealthDirect" id="vHealthDirectResultMap">
+		<result property="id" column="id" />
+		<result property="directFlag" column="direct_flag" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		id,
+		direct_flag
+    </sql>
+	<sql id="entity_properties">
+		#{id,jdbcType=CHAR},
+		#{directFlag,jdbcType=DOUBLE}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.id,jdbcType=CHAR},
+		#{item.directFlag,jdbcType=DOUBLE}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		direct_flag
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{directFlag,jdbcType=DOUBLE}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.directFlag,jdbcType=DOUBLE}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model..VHealthDirect" useGeneratedKeys="true" keyProperty="id">
+		insert into v_health_direct( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into v_health_direct( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from v_health_direct
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from v_health_direct
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model..VHealthDirect">
+		update v_health_direct 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="directFlag != null and directFlag != ''">direct_flag = #{directFlag},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="vHealthDirectResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from v_health_direct
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="directFlag != null and directFlag != ''">and direct_flag = #{directFlag}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="vHealthDirectResultMap" parameterType="com.gyguohua.model..VHealthDirect">
+		select <include refid="table_columns" />
+		from v_health_direct
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

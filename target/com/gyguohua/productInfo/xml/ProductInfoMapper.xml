@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua..mapper.ProductInfoMapper">
+	<resultMap type="com.gyguohua.model..ProductInfo" id="productInfoResultMap">
+		<result property="confirmflag" column="confirmflag" />
+		<result property="catMark" column="cat_mark" />
+		<result property="gapCno" column="gap_cno" />
+		<result property="reckonFlag" column="reckon_flag" />
+		<result property="inputsFlag" column="inputs_flag" />
+		<result property="dataSource" column="data_source" />
+		<result property="way4" column="way4" />
+		<result property="iszystate" column="iszystate" />
+		<result property="basicMedicant" column="basic_medicant" />
+		<result property="updateContent" column="update_content" />
+		<result property="hospitalId" column="hospital_id" />
+		<result property="hospitalName" column="hospital_name" />
+		<result property="enableFlag" column="enable_flag" />
+		<result property="sourceCountry" column="source_country" />
+		<result property="synchronizedDate" column="synchronized_date" />
+		<result property="cleanDate" column="clean_date" />
+		<result property="createUsername" column="create_username" />
+		<result property="lastUpdateUsername" column="last_update_username" />
+		<result property="description" column="description" />
+		<result property="lockFlag" column="lock_flag" />
+		<result property="archiveNum" column="archive_num" />
+		<result property="associateFlag" column="associate_flag" />
+		<result property="awardDate" column="award_date" />
+		<result property="originalPermitNumber" column="original_permit_number" />
+		<result property="permitDate" column="permit_date" />
+		<result property="url" column="url" />
+		<result property="bigWrap" column="big_wrap" />
+		<result property="averageDayEat" column="average_day_eat" />
+		<result property="importFlag" column="import_flag" />
+		<result property="checkUser" column="check_user" />
+		<result property="checkDate" column="check_date" />
+		<result property="createUser" column="create_user" />
+		<result property="createDate" column="create_date" />
+		<result property="createPlat" column="create_plat" />
+		<result property="createOrg" column="create_org" />
+		<result property="lastUpdateUser" column="last_update_user" />
+		<result property="lastUpdateDate" column="last_update_date" />
+		<result property="lastUpdatePlat" column="last_update_plat" />
+		<result property="lastUpdateOrg" column="last_update_org" />
+		<result property="readyFlag" column="ready_flag" />
+		<result property="certificateNumber" column="certificate_number" />
+		<result property="doseageFormName" column="doseage_form_name" />
+		<result property="userDesc" column="user_desc" />
+		<result property="productClass" column="product_class" />
+		<result property="insuredDrugType" column="insured_drug_type" />
+		<result property="insuredDrugNubmer" column="insured_drug_nubmer" />
+		<result property="bulletinDrugName" column="bulletin_drug_name" />
+		<result property="bulletinModeName" column="bulletin_mode_name" />
+		<result property="bulletinSpec" column="bulletin_spec" />
+		<result property="platType" column="plat_type" />
+		<result property="insuranceType" column="insurance_type" />
+		<result property="bWrap" column="b_wrap" />
+		<result property="sWrap" column="s_wrap" />
+		<result property="smallestUnits" column="smallest_units" />
+		<result property="gmpNumber" column="gmp_number" />
+		<result property="standardsNumber" column="standards_number" />
+		<result property="foreignFlag" column="foreign_flag" />
+		<result property="runDate" column="run_date" />
+		<result property="medicalId" column="medical_id" />
+		<result property="medicalName" column="medical_name" />
+		<result property="medicalType" column="medical_type" />
+		<result property="centerProductLast" column="center_product_last" />
+		<result property="centerDrugLast" column="center_drug_last" />
+		<result property="centerEnableFlag" column="center_enable_flag" />
+		<result property="centerCheckFlag" column="center_check_flag" />
+		<result property="normPrice" column="norm_price" />
+		<result property="bidFlag" column="bid_flag" />
+		<result property="manufactureName" column="manufacture_name" />
+		<result property="medicelFlag" column="medicel_flag" />
+		<result property="diffPriceFlag" column="diff_price_flag" />
+		<result property="diffPriceText" column="diff_price_text" />
+		<result property="dataUseMax" column="data_use_max" />
+		<result property="dataUseMin" column="data_use_min" />
+		<result property="dataNumMax" column="data_num_max" />
+		<result property="dataNumMin" column="data_num_min" />
+		<result property="fromCentralData" column="from_central_data" />
+		<result property="fromTradeFlag" column="from_trade_flag" />
+		<result property="categoryBelong" column="category_belong" />
+		<result property="standardsEditNumber" column="standards_edit_number" />
+		<result property="standardsIsFlag" column="standards_is_flag" />
+		<result property="gmpEditNumber" column="gmp_edit_number" />
+		<result property="gmpIsFlag" column="gmp_is_flag" />
+		<result property="permitEditNumber" column="permit_edit_number" />
+		<result property="permitIsFlag" column="permit_is_flag" />
+		<result property="bidFlagEnter" column="bid_flag_enter" />
+		<result property="bidBox1" column="bid_box1" />
+		<result property="zScore" column="z_score" />
+		<result property="year1" column="year1" />
+		<result property="price1" column="price1" />
+		<result property="desc1" column="desc1" />
+		<result property="year2" column="year2" />
+		<result property="price2" column="price2" />
+		<result property="desc2" column="desc2" />
+		<result property="normPriceFrom" column="norm_price_from" />
+		<result property="isJy" column="is_jy" />
+		<result property="jyDirectory" column="jy_directory" />
+		<result property="isQc" column="is_qc" />
+		<result property="isDzjg" column="is_dzjg" />
+		<result property="isDdzl" column="is_ddzl" />
+		<result property="medicalJyNum" column="medical_jy_num" />
+		<result property="province4" column="province4" />
+		<result property="pricetype4" column="pricetype4" />
+		<result property="bz4" column="bz4" />
+		<result property="priceClarify" column="price_clarify" />
+		<result property="medicalJyDate" column="medical_jy_date" />
+		<result property="medicalJkNum" column="medical_jk_num" />
+		<result property="medicalJkDate" column="medical_jk_date" />
+		<result property="productionNum" column="production_num" />
+		<result property="productionDate" column="production_date" />
+		<result property="catalogId" column="catalog_id" />
+		<result property="tdFacotry" column="td_facotry" />
+		<result property="tdProductPrice" column="td_product_price" />
+		<result property="beijingSelect" column="beijing_select" />
+		<result property="ylyGmp" column="yly_gmp" />
+		<result property="zycGap" column="zyc_gap" />
+		<result property="productRank" column="product_rank" />
+		<result property="isPsur" column="is_psur" />
+		<result property="isBad" column="is_bad" />
+		<result property="badFileNo" column="bad_file_no" />
+		<result property="aveDateNum" column="ave_date_num" />
+		<result property="medicalJyYj" column="medical_jy_yj" />
+		<result property="isDjy" column="is_djy" />
+		<result property="beijingTradeJe" column="beijing_trade_je" />
+		<result property="updateFlag" column="update_flag" />
+		<result property="linkRemark" column="link_remark" />
+		<result property="updateRemark" column="update_remark" />
+		<result property="province" column="province" />
+		<result property="ylgmpNo" column="ylgmp_no" />
+		<result property="sfdaLink" column="sfda_link" />
+		<result property="date2" column="date2" />
+		<result property="noPrice" column="no_price" />
+		<result property="updateUser" column="update_user" />
+		<result property="linkDate" column="link_date" />
+		<result property="updateDate" column="update_date" />
+		<result property="selfprice" column="selfprice" />
+		<result property="officialnotice" column="officialnotice" />
+		<result property="picsGmp" column="pics_gmp" />
+		<result property="priceRightFlag" column="price_right_flag" />
+		<result property="agencyorgdate" column="agencyorgdate" />
+		<result property="useUnit" column="use_unit" />
+		<result property="linkUser" column="link_user" />
+		<result property="catalogIdLx" column="catalog_id_lx" />
+		<result property="noProduce" column="no_produce" />
+		<result property="improtOrgid" column="improt_orgid" />
+		<result property="inputFlag" column="input_flag" />
+		<result property="inputPrice" column="input_price" />
+		<result property="inputBz" column="input_bz" />
+		<result property="varPrice" column="var_price" />
+		<result property="reckonPrice" column="reckon_price" />
+		<result property="priceBz2" column="price_bz2" />
+		<result property="priceBz3" column="price_bz3" />
+		<result property="minPrice" column="min_price" />
+		<result property="specNd" column="spec_nd" />
+		<result property="specValue" column="spec_value" />
+		<result property="beijingPrice" column="beijing_price" />
+		<result property="year3" column="year3" />
+		<result property="desc3" column="desc3" />
+		<result property="price3" column="price3" />
+		<result property="province3" column="province3" />
+		<result property="date3" column="date3" />
+		<result property="bz3" column="bz3" />
+		<result property="flag3" column="flag3" />
+		<result property="affirm3" column="affirm3" />
+		<result property="submit3" column="submit3" />
+		<result property="jstype3" column="jstype3" />
+		<result property="spec3" column="spec3" />
+		<result property="dbprice3" column="dbprice3" />
+		<result property="submitdate3" column="submitdate3" />
+		<result property="catalogArea" column="catalog_area" />
+		<result property="clarify" column="clarify" />
+		<result property="price4" column="price4" />
+		<result property="id" column="id" />
+		<result property="dataProductId" column="data_product_id" />
+		<result property="categoryId" column="category_id" />
+		<result property="code" column="code" />
+		<result property="code12Id" column="code12_id" />
+		<result property="code16Id" column="code16_id" />
+		<result property="code18Id" column="code18_id" />
+		<result property="doseageFormCode" column="doseage_form_code" />
+		<result property="saltCode" column="salt_code" />
+		<result property="nameChn" column="name_chn" />
+		<result property="nameEng" column="name_eng" />
+		<result property="spellAbbr2" column="spell_abbr2" />
+		<result property="nameWb2" column="name_wb2" />
+		<result property="spec" column="spec" />
+		<result property="standRate" column="stand_rate" />
+		<result property="prescription" column="prescription" />
+		<result property="nationalInsuranceDrug" column="national_insurance_drug" />
+		<result property="insuranceNo" column="insurance_no" />
+		<result property="nationalBasicDrug" column="national_basic_drug" />
+		<result property="doseageDesc" column="doseage_desc" />
+		<result property="drugSerialNumber" column="drug_serial_number" />
+		<result property="drugProperty" column="drug_property" />
+		<result property="wrapUnit" column="wrap_unit" />
+		<result property="wrapNum" column="wrap_num" />
+		<result property="weightUnit" column="weight_unit" />
+		<result property="weightNum" column="weight_num" />
+		<result property="contentUnit" column="content_unit" />
+		<result property="contentNum" column="content_num" />
+		<result property="archiveNum2" column="archive_num2" />
+		<result property="criterionType" column="criterion_type" />
+		<result property="criterionNum" column="criterion_num" />
+		<result property="manufactureId" column="manufacture_id" />
+		<result property="productCode" column="product_code" />
+		<result property="tradeName" column="trade_name" />
+		<result property="memberType" column="member_type" />
+		<result property="spellAbbr" column="spell_abbr" />
+		<result property="nameWb" column="name_wb" />
+		<result property="nationalRetailPrice" column="national_retail_price" />
+		<result property="priceType" column="price_type" />
+		<result property="permitNumber" column="permit_number" />
+		<result property="expiryDate" column="expiry_date" />
+		<result property="materialSource" column="material_source" />
+		<result property="productSource" column="product_source" />
+		<result property="importDrugLicenceNumber" column="import_drug_licence_number" />
+		<result property="importLicenceExpiryDate" column="import_licence_expiry_date" />
+		<result property="materialQualityGrade" column="material_quality_grade" />
+		<result property="gmpFlag" column="gmp_flag" />
+		<result property="highFlag" column="high_flag" />
+		<result property="qualityCode" column="quality_code" />
+		<result property="wrapCode" column="wrap_code" />
+		<result property="wrapName" column="wrap_name" />
+		<result property="wrapDesc" column="wrap_desc" />
+		<result property="newDrugFlag" column="new_drug_flag" />
+		<result property="newDrugStartDate" column="new_drug_start_date" />
+		<result property="newDrugEndDate" column="new_drug_end_date" />
+		<result property="consignFlag" column="consign_flag" />
+		<result property="consignCompanyName" column="consign_company_name" />
+		<result property="consignExpiryDate" column="consign_expiry_date" />
+		<result property="generalAgentId" column="general_agent_id" />
+		<result property="generalAgentName" column="general_agent_name" />
+		<result property="middleStandRate" column="middle_stand_rate" />
+		<result property="bigMiddleRate" column="big_middle_rate" />
+		<result property="useUnit1" column="use_unit1" />
+		<result property="specUnit" column="spec_unit" />
+		<result property="remark" column="remark" />
+		<result property="checkFlag" column="check_flag" />
+		<result property="checkRemark" column="check_remark" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		confirmflag,
+		cat_mark,
+		gap_cno,
+		reckon_flag,
+		inputs_flag,
+		data_source,
+		way4,
+		iszystate,
+		basic_medicant,
+		update_content,
+		hospital_id,
+		hospital_name,
+		enable_flag,
+		source_country,
+		synchronized_date,
+		clean_date,
+		create_username,
+		last_update_username,
+		description,
+		lock_flag,
+		archive_num,
+		associate_flag,
+		award_date,
+		original_permit_number,
+		permit_date,
+		url,
+		big_wrap,
+		average_day_eat,
+		import_flag,
+		check_user,
+		check_date,
+		create_user,
+		create_date,
+		create_plat,
+		create_org,
+		last_update_user,
+		last_update_date,
+		last_update_plat,
+		last_update_org,
+		ready_flag,
+		certificate_number,
+		doseage_form_name,
+		user_desc,
+		product_class,
+		insured_drug_type,
+		insured_drug_nubmer,
+		bulletin_drug_name,
+		bulletin_mode_name,
+		bulletin_spec,
+		plat_type,
+		insurance_type,
+		b_wrap,
+		s_wrap,
+		smallest_units,
+		gmp_number,
+		standards_number,
+		foreign_flag,
+		run_date,
+		medical_id,
+		medical_name,
+		medical_type,
+		center_product_last,
+		center_drug_last,
+		center_enable_flag,
+		center_check_flag,
+		norm_price,
+		bid_flag,
+		manufacture_name,
+		medicel_flag,
+		diff_price_flag,
+		diff_price_text,
+		data_use_max,
+		data_use_min,
+		data_num_max,
+		data_num_min,
+		from_central_data,
+		from_trade_flag,
+		category_belong,
+		standards_edit_number,
+		standards_is_flag,
+		gmp_edit_number,
+		gmp_is_flag,
+		permit_edit_number,
+		permit_is_flag,
+		bid_flag_enter,
+		bid_box1,
+		z_score,
+		year1,
+		price1,
+		desc1,
+		year2,
+		price2,
+		desc2,
+		norm_price_from,
+		is_jy,
+		jy_directory,
+		is_qc,
+		is_dzjg,
+		is_ddzl,
+		medical_jy_num,
+		province4,
+		pricetype4,
+		bz4,
+		price_clarify,
+		medical_jy_date,
+		medical_jk_num,
+		medical_jk_date,
+		production_num,
+		production_date,
+		catalog_id,
+		td_facotry,
+		td_product_price,
+		beijing_select,
+		yly_gmp,
+		zyc_gap,
+		product_rank,
+		is_psur,
+		is_bad,
+		bad_file_no,
+		ave_date_num,
+		medical_jy_yj,
+		is_djy,
+		beijing_trade_je,
+		update_flag,
+		link_remark,
+		update_remark,
+		province,
+		ylgmp_no,
+		sfda_link,
+		date2,
+		no_price,
+		update_user,
+		link_date,
+		update_date,
+		selfprice,
+		officialnotice,
+		pics_gmp,
+		price_right_flag,
+		agencyorgdate,
+		use_unit,
+		link_user,
+		catalog_id_lx,
+		no_produce,
+		improt_orgid,
+		input_flag,
+		input_price,
+		input_bz,
+		var_price,
+		reckon_price,
+		price_bz2,
+		price_bz3,
+		min_price,
+		spec_nd,
+		spec_value,
+		beijing_price,
+		year3,
+		desc3,
+		price3,
+		province3,
+		date3,
+		bz3,
+		flag3,
+		affirm3,
+		submit3,
+		jstype3,
+		spec3,
+		dbprice3,
+		submitdate3,
+		catalog_area,
+		clarify,
+		price4,
+		id,
+		data_product_id,
+		category_id,
+		code,
+		code12_id,
+		code16_id,
+		code18_id,
+		doseage_form_code,
+		salt_code,
+		name_chn,
+		name_eng,
+		spell_abbr2,
+		name_wb2,
+		spec,
+		stand_rate,
+		prescription,
+		national_insurance_drug,
+		insurance_no,
+		national_basic_drug,
+		doseage_desc,
+		drug_serial_number,
+		drug_property,
+		wrap_unit,
+		wrap_num,
+		weight_unit,
+		weight_num,
+		content_unit,
+		content_num,
+		archive_num2,
+		criterion_type,
+		criterion_num,
+		manufacture_id,
+		product_code,
+		trade_name,
+		member_type,
+		spell_abbr,
+		name_wb,
+		national_retail_price,
+		price_type,
+		permit_number,
+		expiry_date,
+		material_source,
+		product_source,
+		import_drug_licence_number,
+		import_licence_expiry_date,
+		material_quality_grade,
+		gmp_flag,
+		high_flag,
+		quality_code,
+		wrap_code,
+		wrap_name,
+		wrap_desc,
+		new_drug_flag,
+		new_drug_start_date,
+		new_drug_end_date,
+		consign_flag,
+		consign_company_name,
+		consign_expiry_date,
+		general_agent_id,
+		general_agent_name,
+		middle_stand_rate,
+		big_middle_rate,
+		use_unit1,
+		spec_unit,
+		remark,
+		check_flag,
+		check_remark
+    </sql>
+	<sql id="entity_properties">
+		#{confirmflag,jdbcType=UNDEFINED},
+		#{catMark,jdbcType=UNDEFINED},
+		#{gapCno,jdbcType=UNDEFINED},
+		#{reckonFlag,jdbcType=UNDEFINED},
+		#{inputsFlag,jdbcType=UNDEFINED},
+		#{dataSource,jdbcType=UNDEFINED},
+		#{way4,jdbcType=UNDEFINED},
+		#{iszystate,jdbcType=UNDEFINED},
+		#{basicMedicant,jdbcType=UNDEFINED},
+		#{updateContent,jdbcType=UNDEFINED},
+		#{hospitalId,jdbcType=UNDEFINED},
+		#{hospitalName,jdbcType=UNDEFINED},
+		#{enableFlag,jdbcType=UNDEFINED},
+		#{sourceCountry,jdbcType=UNDEFINED},
+		#{synchronizedDate,jdbcType=UNDEFINED},
+		#{cleanDate,jdbcType=UNDEFINED},
+		#{createUsername,jdbcType=UNDEFINED},
+		#{lastUpdateUsername,jdbcType=UNDEFINED},
+		#{description,jdbcType=UNDEFINED},
+		#{lockFlag,jdbcType=UNDEFINED},
+		#{archiveNum,jdbcType=UNDEFINED},
+		#{associateFlag,jdbcType=UNDEFINED},
+		#{awardDate,jdbcType=UNDEFINED},
+		#{originalPermitNumber,jdbcType=UNDEFINED},
+		#{permitDate,jdbcType=UNDEFINED},
+		#{url,jdbcType=UNDEFINED},
+		#{bigWrap,jdbcType=UNDEFINED},
+		#{averageDayEat,jdbcType=UNDEFINED},
+		#{importFlag,jdbcType=UNDEFINED},
+		#{checkUser,jdbcType=UNDEFINED},
+		#{checkDate,jdbcType=UNDEFINED},
+		#{createUser,jdbcType=UNDEFINED},
+		#{createDate,jdbcType=UNDEFINED},
+		#{createPlat,jdbcType=UNDEFINED},
+		#{createOrg,jdbcType=UNDEFINED},
+		#{lastUpdateUser,jdbcType=UNDEFINED},
+		#{lastUpdateDate,jdbcType=UNDEFINED},
+		#{lastUpdatePlat,jdbcType=UNDEFINED},
+		#{lastUpdateOrg,jdbcType=UNDEFINED},
+		#{readyFlag,jdbcType=UNDEFINED},
+		#{certificateNumber,jdbcType=UNDEFINED},
+		#{doseageFormName,jdbcType=UNDEFINED},
+		#{userDesc,jdbcType=UNDEFINED},
+		#{productClass,jdbcType=UNDEFINED},
+		#{insuredDrugType,jdbcType=UNDEFINED},
+		#{insuredDrugNubmer,jdbcType=UNDEFINED},
+		#{bulletinDrugName,jdbcType=UNDEFINED},
+		#{bulletinModeName,jdbcType=UNDEFINED},
+		#{bulletinSpec,jdbcType=UNDEFINED},
+		#{platType,jdbcType=UNDEFINED},
+		#{insuranceType,jdbcType=UNDEFINED},
+		#{bWrap,jdbcType=UNDEFINED},
+		#{sWrap,jdbcType=UNDEFINED},
+		#{smallestUnits,jdbcType=UNDEFINED},
+		#{gmpNumber,jdbcType=UNDEFINED},
+		#{standardsNumber,jdbcType=UNDEFINED},
+		#{foreignFlag,jdbcType=UNDEFINED},
+		#{runDate,jdbcType=UNDEFINED},
+		#{medicalId,jdbcType=UNDEFINED},
+		#{medicalName,jdbcType=UNDEFINED},
+		#{medicalType,jdbcType=UNDEFINED},
+		#{centerProductLast,jdbcType=UNDEFINED},
+		#{centerDrugLast,jdbcType=UNDEFINED},
+		#{centerEnableFlag,jdbcType=UNDEFINED},
+		#{centerCheckFlag,jdbcType=UNDEFINED},
+		#{normPrice,jdbcType=UNDEFINED},
+		#{bidFlag,jdbcType=UNDEFINED},
+		#{manufactureName,jdbcType=UNDEFINED},
+		#{medicelFlag,jdbcType=UNDEFINED},
+		#{diffPriceFlag,jdbcType=UNDEFINED},
+		#{diffPriceText,jdbcType=UNDEFINED},
+		#{dataUseMax,jdbcType=UNDEFINED},
+		#{dataUseMin,jdbcType=UNDEFINED},
+		#{dataNumMax,jdbcType=UNDEFINED},
+		#{dataNumMin,jdbcType=UNDEFINED},
+		#{fromCentralData,jdbcType=UNDEFINED},
+		#{fromTradeFlag,jdbcType=UNDEFINED},
+		#{categoryBelong,jdbcType=UNDEFINED},
+		#{standardsEditNumber,jdbcType=UNDEFINED},
+		#{standardsIsFlag,jdbcType=UNDEFINED},
+		#{gmpEditNumber,jdbcType=UNDEFINED},
+		#{gmpIsFlag,jdbcType=UNDEFINED},
+		#{permitEditNumber,jdbcType=UNDEFINED},
+		#{permitIsFlag,jdbcType=UNDEFINED},
+		#{bidFlagEnter,jdbcType=UNDEFINED},
+		#{bidBox1,jdbcType=UNDEFINED},
+		#{zScore,jdbcType=UNDEFINED},
+		#{year1,jdbcType=UNDEFINED},
+		#{price1,jdbcType=UNDEFINED},
+		#{desc1,jdbcType=UNDEFINED},
+		#{year2,jdbcType=UNDEFINED},
+		#{price2,jdbcType=UNDEFINED},
+		#{desc2,jdbcType=UNDEFINED},
+		#{normPriceFrom,jdbcType=UNDEFINED},
+		#{isJy,jdbcType=UNDEFINED},
+		#{jyDirectory,jdbcType=UNDEFINED},
+		#{isQc,jdbcType=UNDEFINED},
+		#{isDzjg,jdbcType=UNDEFINED},
+		#{isDdzl,jdbcType=UNDEFINED},
+		#{medicalJyNum,jdbcType=UNDEFINED},
+		#{province4,jdbcType=UNDEFINED},
+		#{pricetype4,jdbcType=UNDEFINED},
+		#{bz4,jdbcType=UNDEFINED},
+		#{priceClarify,jdbcType=UNDEFINED},
+		#{medicalJyDate,jdbcType=UNDEFINED},
+		#{medicalJkNum,jdbcType=UNDEFINED},
+		#{medicalJkDate,jdbcType=UNDEFINED},
+		#{productionNum,jdbcType=UNDEFINED},
+		#{productionDate,jdbcType=UNDEFINED},
+		#{catalogId,jdbcType=UNDEFINED},
+		#{tdFacotry,jdbcType=UNDEFINED},
+		#{tdProductPrice,jdbcType=UNDEFINED},
+		#{beijingSelect,jdbcType=UNDEFINED},
+		#{ylyGmp,jdbcType=UNDEFINED},
+		#{zycGap,jdbcType=UNDEFINED},
+		#{productRank,jdbcType=UNDEFINED},
+		#{isPsur,jdbcType=UNDEFINED},
+		#{isBad,jdbcType=UNDEFINED},
+		#{badFileNo,jdbcType=UNDEFINED},
+		#{aveDateNum,jdbcType=UNDEFINED},
+		#{medicalJyYj,jdbcType=UNDEFINED},
+		#{isDjy,jdbcType=UNDEFINED},
+		#{beijingTradeJe,jdbcType=UNDEFINED},
+		#{updateFlag,jdbcType=UNDEFINED},
+		#{linkRemark,jdbcType=UNDEFINED},
+		#{updateRemark,jdbcType=UNDEFINED},
+		#{province,jdbcType=UNDEFINED},
+		#{ylgmpNo,jdbcType=UNDEFINED},
+		#{sfdaLink,jdbcType=UNDEFINED},
+		#{date2,jdbcType=UNDEFINED},
+		#{noPrice,jdbcType=UNDEFINED},
+		#{updateUser,jdbcType=UNDEFINED},
+		#{linkDate,jdbcType=UNDEFINED},
+		#{updateDate,jdbcType=UNDEFINED},
+		#{selfprice,jdbcType=UNDEFINED},
+		#{officialnotice,jdbcType=UNDEFINED},
+		#{picsGmp,jdbcType=UNDEFINED},
+		#{priceRightFlag,jdbcType=UNDEFINED},
+		#{agencyorgdate,jdbcType=UNDEFINED},
+		#{useUnit,jdbcType=UNDEFINED},
+		#{linkUser,jdbcType=UNDEFINED},
+		#{catalogIdLx,jdbcType=UNDEFINED},
+		#{noProduce,jdbcType=UNDEFINED},
+		#{improtOrgid,jdbcType=UNDEFINED},
+		#{inputFlag,jdbcType=UNDEFINED},
+		#{inputPrice,jdbcType=UNDEFINED},
+		#{inputBz,jdbcType=UNDEFINED},
+		#{varPrice,jdbcType=UNDEFINED},
+		#{reckonPrice,jdbcType=UNDEFINED},
+		#{priceBz2,jdbcType=UNDEFINED},
+		#{priceBz3,jdbcType=UNDEFINED},
+		#{minPrice,jdbcType=UNDEFINED},
+		#{specNd,jdbcType=UNDEFINED},
+		#{specValue,jdbcType=UNDEFINED},
+		#{beijingPrice,jdbcType=UNDEFINED},
+		#{year3,jdbcType=UNDEFINED},
+		#{desc3,jdbcType=UNDEFINED},
+		#{price3,jdbcType=UNDEFINED},
+		#{province3,jdbcType=UNDEFINED},
+		#{date3,jdbcType=UNDEFINED},
+		#{bz3,jdbcType=UNDEFINED},
+		#{flag3,jdbcType=UNDEFINED},
+		#{affirm3,jdbcType=UNDEFINED},
+		#{submit3,jdbcType=UNDEFINED},
+		#{jstype3,jdbcType=UNDEFINED},
+		#{spec3,jdbcType=UNDEFINED},
+		#{dbprice3,jdbcType=UNDEFINED},
+		#{submitdate3,jdbcType=UNDEFINED},
+		#{catalogArea,jdbcType=UNDEFINED},
+		#{clarify,jdbcType=UNDEFINED},
+		#{price4,jdbcType=UNDEFINED},
+		#{id,jdbcType=UNDEFINED},
+		#{dataProductId,jdbcType=UNDEFINED},
+		#{categoryId,jdbcType=UNDEFINED},
+		#{code,jdbcType=UNDEFINED},
+		#{code12Id,jdbcType=UNDEFINED},
+		#{code16Id,jdbcType=UNDEFINED},
+		#{code18Id,jdbcType=UNDEFINED},
+		#{doseageFormCode,jdbcType=UNDEFINED},
+		#{saltCode,jdbcType=UNDEFINED},
+		#{nameChn,jdbcType=UNDEFINED},
+		#{nameEng,jdbcType=UNDEFINED},
+		#{spellAbbr2,jdbcType=UNDEFINED},
+		#{nameWb2,jdbcType=UNDEFINED},
+		#{spec,jdbcType=UNDEFINED},
+		#{standRate,jdbcType=UNDEFINED},
+		#{prescription,jdbcType=UNDEFINED},
+		#{nationalInsuranceDrug,jdbcType=UNDEFINED},
+		#{insuranceNo,jdbcType=UNDEFINED},
+		#{nationalBasicDrug,jdbcType=UNDEFINED},
+		#{doseageDesc,jdbcType=UNDEFINED},
+		#{drugSerialNumber,jdbcType=UNDEFINED},
+		#{drugProperty,jdbcType=UNDEFINED},
+		#{wrapUnit,jdbcType=UNDEFINED},
+		#{wrapNum,jdbcType=UNDEFINED},
+		#{weightUnit,jdbcType=UNDEFINED},
+		#{weightNum,jdbcType=UNDEFINED},
+		#{contentUnit,jdbcType=UNDEFINED},
+		#{contentNum,jdbcType=UNDEFINED},
+		#{archiveNum2,jdbcType=UNDEFINED},
+		#{criterionType,jdbcType=UNDEFINED},
+		#{criterionNum,jdbcType=UNDEFINED},
+		#{manufactureId,jdbcType=UNDEFINED},
+		#{productCode,jdbcType=UNDEFINED},
+		#{tradeName,jdbcType=UNDEFINED},
+		#{memberType,jdbcType=UNDEFINED},
+		#{spellAbbr,jdbcType=UNDEFINED},
+		#{nameWb,jdbcType=UNDEFINED},
+		#{nationalRetailPrice,jdbcType=UNDEFINED},
+		#{priceType,jdbcType=UNDEFINED},
+		#{permitNumber,jdbcType=UNDEFINED},
+		#{expiryDate,jdbcType=UNDEFINED},
+		#{materialSource,jdbcType=UNDEFINED},
+		#{productSource,jdbcType=UNDEFINED},
+		#{importDrugLicenceNumber,jdbcType=UNDEFINED},
+		#{importLicenceExpiryDate,jdbcType=UNDEFINED},
+		#{materialQualityGrade,jdbcType=UNDEFINED},
+		#{gmpFlag,jdbcType=UNDEFINED},
+		#{highFlag,jdbcType=UNDEFINED},
+		#{qualityCode,jdbcType=UNDEFINED},
+		#{wrapCode,jdbcType=UNDEFINED},
+		#{wrapName,jdbcType=UNDEFINED},
+		#{wrapDesc,jdbcType=UNDEFINED},
+		#{newDrugFlag,jdbcType=UNDEFINED},
+		#{newDrugStartDate,jdbcType=UNDEFINED},
+		#{newDrugEndDate,jdbcType=UNDEFINED},
+		#{consignFlag,jdbcType=UNDEFINED},
+		#{consignCompanyName,jdbcType=UNDEFINED},
+		#{consignExpiryDate,jdbcType=UNDEFINED},
+		#{generalAgentId,jdbcType=UNDEFINED},
+		#{generalAgentName,jdbcType=UNDEFINED},
+		#{middleStandRate,jdbcType=UNDEFINED},
+		#{bigMiddleRate,jdbcType=UNDEFINED},
+		#{useUnit1,jdbcType=UNDEFINED},
+		#{specUnit,jdbcType=UNDEFINED},
+		#{remark,jdbcType=UNDEFINED},
+		#{checkFlag,jdbcType=UNDEFINED},
+		#{checkRemark,jdbcType=UNDEFINED}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.confirmflag,jdbcType=UNDEFINED},
+		#{item.catMark,jdbcType=UNDEFINED},
+		#{item.gapCno,jdbcType=UNDEFINED},
+		#{item.reckonFlag,jdbcType=UNDEFINED},
+		#{item.inputsFlag,jdbcType=UNDEFINED},
+		#{item.dataSource,jdbcType=UNDEFINED},
+		#{item.way4,jdbcType=UNDEFINED},
+		#{item.iszystate,jdbcType=UNDEFINED},
+		#{item.basicMedicant,jdbcType=UNDEFINED},
+		#{item.updateContent,jdbcType=UNDEFINED},
+		#{item.hospitalId,jdbcType=UNDEFINED},
+		#{item.hospitalName,jdbcType=UNDEFINED},
+		#{item.enableFlag,jdbcType=UNDEFINED},
+		#{item.sourceCountry,jdbcType=UNDEFINED},
+		#{item.synchronizedDate,jdbcType=UNDEFINED},
+		#{item.cleanDate,jdbcType=UNDEFINED},
+		#{item.createUsername,jdbcType=UNDEFINED},
+		#{item.lastUpdateUsername,jdbcType=UNDEFINED},
+		#{item.description,jdbcType=UNDEFINED},
+		#{item.lockFlag,jdbcType=UNDEFINED},
+		#{item.archiveNum,jdbcType=UNDEFINED},
+		#{item.associateFlag,jdbcType=UNDEFINED},
+		#{item.awardDate,jdbcType=UNDEFINED},
+		#{item.originalPermitNumber,jdbcType=UNDEFINED},
+		#{item.permitDate,jdbcType=UNDEFINED},
+		#{item.url,jdbcType=UNDEFINED},
+		#{item.bigWrap,jdbcType=UNDEFINED},
+		#{item.averageDayEat,jdbcType=UNDEFINED},
+		#{item.importFlag,jdbcType=UNDEFINED},
+		#{item.checkUser,jdbcType=UNDEFINED},
+		#{item.checkDate,jdbcType=UNDEFINED},
+		#{item.createUser,jdbcType=UNDEFINED},
+		#{item.createDate,jdbcType=UNDEFINED},
+		#{item.createPlat,jdbcType=UNDEFINED},
+		#{item.createOrg,jdbcType=UNDEFINED},
+		#{item.lastUpdateUser,jdbcType=UNDEFINED},
+		#{item.lastUpdateDate,jdbcType=UNDEFINED},
+		#{item.lastUpdatePlat,jdbcType=UNDEFINED},
+		#{item.lastUpdateOrg,jdbcType=UNDEFINED},
+		#{item.readyFlag,jdbcType=UNDEFINED},
+		#{item.certificateNumber,jdbcType=UNDEFINED},
+		#{item.doseageFormName,jdbcType=UNDEFINED},
+		#{item.userDesc,jdbcType=UNDEFINED},
+		#{item.productClass,jdbcType=UNDEFINED},
+		#{item.insuredDrugType,jdbcType=UNDEFINED},
+		#{item.insuredDrugNubmer,jdbcType=UNDEFINED},
+		#{item.bulletinDrugName,jdbcType=UNDEFINED},
+		#{item.bulletinModeName,jdbcType=UNDEFINED},
+		#{item.bulletinSpec,jdbcType=UNDEFINED},
+		#{item.platType,jdbcType=UNDEFINED},
+		#{item.insuranceType,jdbcType=UNDEFINED},
+		#{item.bWrap,jdbcType=UNDEFINED},
+		#{item.sWrap,jdbcType=UNDEFINED},
+		#{item.smallestUnits,jdbcType=UNDEFINED},
+		#{item.gmpNumber,jdbcType=UNDEFINED},
+		#{item.standardsNumber,jdbcType=UNDEFINED},
+		#{item.foreignFlag,jdbcType=UNDEFINED},
+		#{item.runDate,jdbcType=UNDEFINED},
+		#{item.medicalId,jdbcType=UNDEFINED},
+		#{item.medicalName,jdbcType=UNDEFINED},
+		#{item.medicalType,jdbcType=UNDEFINED},
+		#{item.centerProductLast,jdbcType=UNDEFINED},
+		#{item.centerDrugLast,jdbcType=UNDEFINED},
+		#{item.centerEnableFlag,jdbcType=UNDEFINED},
+		#{item.centerCheckFlag,jdbcType=UNDEFINED},
+		#{item.normPrice,jdbcType=UNDEFINED},
+		#{item.bidFlag,jdbcType=UNDEFINED},
+		#{item.manufactureName,jdbcType=UNDEFINED},
+		#{item.medicelFlag,jdbcType=UNDEFINED},
+		#{item.diffPriceFlag,jdbcType=UNDEFINED},
+		#{item.diffPriceText,jdbcType=UNDEFINED},
+		#{item.dataUseMax,jdbcType=UNDEFINED},
+		#{item.dataUseMin,jdbcType=UNDEFINED},
+		#{item.dataNumMax,jdbcType=UNDEFINED},
+		#{item.dataNumMin,jdbcType=UNDEFINED},
+		#{item.fromCentralData,jdbcType=UNDEFINED},
+		#{item.fromTradeFlag,jdbcType=UNDEFINED},
+		#{item.categoryBelong,jdbcType=UNDEFINED},
+		#{item.standardsEditNumber,jdbcType=UNDEFINED},
+		#{item.standardsIsFlag,jdbcType=UNDEFINED},
+		#{item.gmpEditNumber,jdbcType=UNDEFINED},
+		#{item.gmpIsFlag,jdbcType=UNDEFINED},
+		#{item.permitEditNumber,jdbcType=UNDEFINED},
+		#{item.permitIsFlag,jdbcType=UNDEFINED},
+		#{item.bidFlagEnter,jdbcType=UNDEFINED},
+		#{item.bidBox1,jdbcType=UNDEFINED},
+		#{item.zScore,jdbcType=UNDEFINED},
+		#{item.year1,jdbcType=UNDEFINED},
+		#{item.price1,jdbcType=UNDEFINED},
+		#{item.desc1,jdbcType=UNDEFINED},
+		#{item.year2,jdbcType=UNDEFINED},
+		#{item.price2,jdbcType=UNDEFINED},
+		#{item.desc2,jdbcType=UNDEFINED},
+		#{item.normPriceFrom,jdbcType=UNDEFINED},
+		#{item.isJy,jdbcType=UNDEFINED},
+		#{item.jyDirectory,jdbcType=UNDEFINED},
+		#{item.isQc,jdbcType=UNDEFINED},
+		#{item.isDzjg,jdbcType=UNDEFINED},
+		#{item.isDdzl,jdbcType=UNDEFINED},
+		#{item.medicalJyNum,jdbcType=UNDEFINED},
+		#{item.province4,jdbcType=UNDEFINED},
+		#{item.pricetype4,jdbcType=UNDEFINED},
+		#{item.bz4,jdbcType=UNDEFINED},
+		#{item.priceClarify,jdbcType=UNDEFINED},
+		#{item.medicalJyDate,jdbcType=UNDEFINED},
+		#{item.medicalJkNum,jdbcType=UNDEFINED},
+		#{item.medicalJkDate,jdbcType=UNDEFINED},
+		#{item.productionNum,jdbcType=UNDEFINED},
+		#{item.productionDate,jdbcType=UNDEFINED},
+		#{item.catalogId,jdbcType=UNDEFINED},
+		#{item.tdFacotry,jdbcType=UNDEFINED},
+		#{item.tdProductPrice,jdbcType=UNDEFINED},
+		#{item.beijingSelect,jdbcType=UNDEFINED},
+		#{item.ylyGmp,jdbcType=UNDEFINED},
+		#{item.zycGap,jdbcType=UNDEFINED},
+		#{item.productRank,jdbcType=UNDEFINED},
+		#{item.isPsur,jdbcType=UNDEFINED},
+		#{item.isBad,jdbcType=UNDEFINED},
+		#{item.badFileNo,jdbcType=UNDEFINED},
+		#{item.aveDateNum,jdbcType=UNDEFINED},
+		#{item.medicalJyYj,jdbcType=UNDEFINED},
+		#{item.isDjy,jdbcType=UNDEFINED},
+		#{item.beijingTradeJe,jdbcType=UNDEFINED},
+		#{item.updateFlag,jdbcType=UNDEFINED},
+		#{item.linkRemark,jdbcType=UNDEFINED},
+		#{item.updateRemark,jdbcType=UNDEFINED},
+		#{item.province,jdbcType=UNDEFINED},
+		#{item.ylgmpNo,jdbcType=UNDEFINED},
+		#{item.sfdaLink,jdbcType=UNDEFINED},
+		#{item.date2,jdbcType=UNDEFINED},
+		#{item.noPrice,jdbcType=UNDEFINED},
+		#{item.updateUser,jdbcType=UNDEFINED},
+		#{item.linkDate,jdbcType=UNDEFINED},
+		#{item.updateDate,jdbcType=UNDEFINED},
+		#{item.selfprice,jdbcType=UNDEFINED},
+		#{item.officialnotice,jdbcType=UNDEFINED},
+		#{item.picsGmp,jdbcType=UNDEFINED},
+		#{item.priceRightFlag,jdbcType=UNDEFINED},
+		#{item.agencyorgdate,jdbcType=UNDEFINED},
+		#{item.useUnit,jdbcType=UNDEFINED},
+		#{item.linkUser,jdbcType=UNDEFINED},
+		#{item.catalogIdLx,jdbcType=UNDEFINED},
+		#{item.noProduce,jdbcType=UNDEFINED},
+		#{item.improtOrgid,jdbcType=UNDEFINED},
+		#{item.inputFlag,jdbcType=UNDEFINED},
+		#{item.inputPrice,jdbcType=UNDEFINED},
+		#{item.inputBz,jdbcType=UNDEFINED},
+		#{item.varPrice,jdbcType=UNDEFINED},
+		#{item.reckonPrice,jdbcType=UNDEFINED},
+		#{item.priceBz2,jdbcType=UNDEFINED},
+		#{item.priceBz3,jdbcType=UNDEFINED},
+		#{item.minPrice,jdbcType=UNDEFINED},
+		#{item.specNd,jdbcType=UNDEFINED},
+		#{item.specValue,jdbcType=UNDEFINED},
+		#{item.beijingPrice,jdbcType=UNDEFINED},
+		#{item.year3,jdbcType=UNDEFINED},
+		#{item.desc3,jdbcType=UNDEFINED},
+		#{item.price3,jdbcType=UNDEFINED},
+		#{item.province3,jdbcType=UNDEFINED},
+		#{item.date3,jdbcType=UNDEFINED},
+		#{item.bz3,jdbcType=UNDEFINED},
+		#{item.flag3,jdbcType=UNDEFINED},
+		#{item.affirm3,jdbcType=UNDEFINED},
+		#{item.submit3,jdbcType=UNDEFINED},
+		#{item.jstype3,jdbcType=UNDEFINED},
+		#{item.spec3,jdbcType=UNDEFINED},
+		#{item.dbprice3,jdbcType=UNDEFINED},
+		#{item.submitdate3,jdbcType=UNDEFINED},
+		#{item.catalogArea,jdbcType=UNDEFINED},
+		#{item.clarify,jdbcType=UNDEFINED},
+		#{item.price4,jdbcType=UNDEFINED},
+		#{item.id,jdbcType=UNDEFINED},
+		#{item.dataProductId,jdbcType=UNDEFINED},
+		#{item.categoryId,jdbcType=UNDEFINED},
+		#{item.code,jdbcType=UNDEFINED},
+		#{item.code12Id,jdbcType=UNDEFINED},
+		#{item.code16Id,jdbcType=UNDEFINED},
+		#{item.code18Id,jdbcType=UNDEFINED},
+		#{item.doseageFormCode,jdbcType=UNDEFINED},
+		#{item.saltCode,jdbcType=UNDEFINED},
+		#{item.nameChn,jdbcType=UNDEFINED},
+		#{item.nameEng,jdbcType=UNDEFINED},
+		#{item.spellAbbr2,jdbcType=UNDEFINED},
+		#{item.nameWb2,jdbcType=UNDEFINED},
+		#{item.spec,jdbcType=UNDEFINED},
+		#{item.standRate,jdbcType=UNDEFINED},
+		#{item.prescription,jdbcType=UNDEFINED},
+		#{item.nationalInsuranceDrug,jdbcType=UNDEFINED},
+		#{item.insuranceNo,jdbcType=UNDEFINED},
+		#{item.nationalBasicDrug,jdbcType=UNDEFINED},
+		#{item.doseageDesc,jdbcType=UNDEFINED},
+		#{item.drugSerialNumber,jdbcType=UNDEFINED},
+		#{item.drugProperty,jdbcType=UNDEFINED},
+		#{item.wrapUnit,jdbcType=UNDEFINED},
+		#{item.wrapNum,jdbcType=UNDEFINED},
+		#{item.weightUnit,jdbcType=UNDEFINED},
+		#{item.weightNum,jdbcType=UNDEFINED},
+		#{item.contentUnit,jdbcType=UNDEFINED},
+		#{item.contentNum,jdbcType=UNDEFINED},
+		#{item.archiveNum2,jdbcType=UNDEFINED},
+		#{item.criterionType,jdbcType=UNDEFINED},
+		#{item.criterionNum,jdbcType=UNDEFINED},
+		#{item.manufactureId,jdbcType=UNDEFINED},
+		#{item.productCode,jdbcType=UNDEFINED},
+		#{item.tradeName,jdbcType=UNDEFINED},
+		#{item.memberType,jdbcType=UNDEFINED},
+		#{item.spellAbbr,jdbcType=UNDEFINED},
+		#{item.nameWb,jdbcType=UNDEFINED},
+		#{item.nationalRetailPrice,jdbcType=UNDEFINED},
+		#{item.priceType,jdbcType=UNDEFINED},
+		#{item.permitNumber,jdbcType=UNDEFINED},
+		#{item.expiryDate,jdbcType=UNDEFINED},
+		#{item.materialSource,jdbcType=UNDEFINED},
+		#{item.productSource,jdbcType=UNDEFINED},
+		#{item.importDrugLicenceNumber,jdbcType=UNDEFINED},
+		#{item.importLicenceExpiryDate,jdbcType=UNDEFINED},
+		#{item.materialQualityGrade,jdbcType=UNDEFINED},
+		#{item.gmpFlag,jdbcType=UNDEFINED},
+		#{item.highFlag,jdbcType=UNDEFINED},
+		#{item.qualityCode,jdbcType=UNDEFINED},
+		#{item.wrapCode,jdbcType=UNDEFINED},
+		#{item.wrapName,jdbcType=UNDEFINED},
+		#{item.wrapDesc,jdbcType=UNDEFINED},
+		#{item.newDrugFlag,jdbcType=UNDEFINED},
+		#{item.newDrugStartDate,jdbcType=UNDEFINED},
+		#{item.newDrugEndDate,jdbcType=UNDEFINED},
+		#{item.consignFlag,jdbcType=UNDEFINED},
+		#{item.consignCompanyName,jdbcType=UNDEFINED},
+		#{item.consignExpiryDate,jdbcType=UNDEFINED},
+		#{item.generalAgentId,jdbcType=UNDEFINED},
+		#{item.generalAgentName,jdbcType=UNDEFINED},
+		#{item.middleStandRate,jdbcType=UNDEFINED},
+		#{item.bigMiddleRate,jdbcType=UNDEFINED},
+		#{item.useUnit1,jdbcType=UNDEFINED},
+		#{item.specUnit,jdbcType=UNDEFINED},
+		#{item.remark,jdbcType=UNDEFINED},
+		#{item.checkFlag,jdbcType=UNDEFINED},
+		#{item.checkRemark,jdbcType=UNDEFINED}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		cat_mark,
+		gap_cno,
+		reckon_flag,
+		inputs_flag,
+		data_source,
+		way4,
+		iszystate,
+		basic_medicant,
+		update_content,
+		hospital_id,
+		hospital_name,
+		enable_flag,
+		source_country,
+		synchronized_date,
+		clean_date,
+		create_username,
+		last_update_username,
+		description,
+		lock_flag,
+		archive_num,
+		associate_flag,
+		award_date,
+		original_permit_number,
+		permit_date,
+		url,
+		big_wrap,
+		average_day_eat,
+		import_flag,
+		check_user,
+		check_date,
+		create_user,
+		create_date,
+		create_plat,
+		create_org,
+		last_update_user,
+		last_update_date,
+		last_update_plat,
+		last_update_org,
+		ready_flag,
+		certificate_number,
+		doseage_form_name,
+		user_desc,
+		product_class,
+		insured_drug_type,
+		insured_drug_nubmer,
+		bulletin_drug_name,
+		bulletin_mode_name,
+		bulletin_spec,
+		plat_type,
+		insurance_type,
+		b_wrap,
+		s_wrap,
+		smallest_units,
+		gmp_number,
+		standards_number,
+		foreign_flag,
+		run_date,
+		medical_id,
+		medical_name,
+		medical_type,
+		center_product_last,
+		center_drug_last,
+		center_enable_flag,
+		center_check_flag,
+		norm_price,
+		bid_flag,
+		manufacture_name,
+		medicel_flag,
+		diff_price_flag,
+		diff_price_text,
+		data_use_max,
+		data_use_min,
+		data_num_max,
+		data_num_min,
+		from_central_data,
+		from_trade_flag,
+		category_belong,
+		standards_edit_number,
+		standards_is_flag,
+		gmp_edit_number,
+		gmp_is_flag,
+		permit_edit_number,
+		permit_is_flag,
+		bid_flag_enter,
+		bid_box1,
+		z_score,
+		year1,
+		price1,
+		desc1,
+		year2,
+		price2,
+		desc2,
+		norm_price_from,
+		is_jy,
+		jy_directory,
+		is_qc,
+		is_dzjg,
+		is_ddzl,
+		medical_jy_num,
+		province4,
+		pricetype4,
+		bz4,
+		price_clarify,
+		medical_jy_date,
+		medical_jk_num,
+		medical_jk_date,
+		production_num,
+		production_date,
+		catalog_id,
+		td_facotry,
+		td_product_price,
+		beijing_select,
+		yly_gmp,
+		zyc_gap,
+		product_rank,
+		is_psur,
+		is_bad,
+		bad_file_no,
+		ave_date_num,
+		medical_jy_yj,
+		is_djy,
+		beijing_trade_je,
+		update_flag,
+		link_remark,
+		update_remark,
+		province,
+		ylgmp_no,
+		sfda_link,
+		date2,
+		no_price,
+		update_user,
+		link_date,
+		update_date,
+		selfprice,
+		officialnotice,
+		pics_gmp,
+		price_right_flag,
+		agencyorgdate,
+		use_unit,
+		link_user,
+		catalog_id_lx,
+		no_produce,
+		improt_orgid,
+		input_flag,
+		input_price,
+		input_bz,
+		var_price,
+		reckon_price,
+		price_bz2,
+		price_bz3,
+		min_price,
+		spec_nd,
+		spec_value,
+		beijing_price,
+		year3,
+		desc3,
+		price3,
+		province3,
+		date3,
+		bz3,
+		flag3,
+		affirm3,
+		submit3,
+		jstype3,
+		spec3,
+		dbprice3,
+		submitdate3,
+		catalog_area,
+		clarify,
+		price4,
+		id,
+		data_product_id,
+		category_id,
+		code,
+		code12_id,
+		code16_id,
+		code18_id,
+		doseage_form_code,
+		salt_code,
+		name_chn,
+		name_eng,
+		spell_abbr2,
+		name_wb2,
+		spec,
+		stand_rate,
+		prescription,
+		national_insurance_drug,
+		insurance_no,
+		national_basic_drug,
+		doseage_desc,
+		drug_serial_number,
+		drug_property,
+		wrap_unit,
+		wrap_num,
+		weight_unit,
+		weight_num,
+		content_unit,
+		content_num,
+		archive_num2,
+		criterion_type,
+		criterion_num,
+		manufacture_id,
+		product_code,
+		trade_name,
+		member_type,
+		spell_abbr,
+		name_wb,
+		national_retail_price,
+		price_type,
+		permit_number,
+		expiry_date,
+		material_source,
+		product_source,
+		import_drug_licence_number,
+		import_licence_expiry_date,
+		material_quality_grade,
+		gmp_flag,
+		high_flag,
+		quality_code,
+		wrap_code,
+		wrap_name,
+		wrap_desc,
+		new_drug_flag,
+		new_drug_start_date,
+		new_drug_end_date,
+		consign_flag,
+		consign_company_name,
+		consign_expiry_date,
+		general_agent_id,
+		general_agent_name,
+		middle_stand_rate,
+		big_middle_rate,
+		use_unit1,
+		spec_unit,
+		remark,
+		check_flag,
+		check_remark
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{catMark,jdbcType=UNDEFINED},
+		#{gapCno,jdbcType=UNDEFINED},
+		#{reckonFlag,jdbcType=UNDEFINED},
+		#{inputsFlag,jdbcType=UNDEFINED},
+		#{dataSource,jdbcType=UNDEFINED},
+		#{way4,jdbcType=UNDEFINED},
+		#{iszystate,jdbcType=UNDEFINED},
+		#{basicMedicant,jdbcType=UNDEFINED},
+		#{updateContent,jdbcType=UNDEFINED},
+		#{hospitalId,jdbcType=UNDEFINED},
+		#{hospitalName,jdbcType=UNDEFINED},
+		#{enableFlag,jdbcType=UNDEFINED},
+		#{sourceCountry,jdbcType=UNDEFINED},
+		#{synchronizedDate,jdbcType=UNDEFINED},
+		#{cleanDate,jdbcType=UNDEFINED},
+		#{createUsername,jdbcType=UNDEFINED},
+		#{lastUpdateUsername,jdbcType=UNDEFINED},
+		#{description,jdbcType=UNDEFINED},
+		#{lockFlag,jdbcType=UNDEFINED},
+		#{archiveNum,jdbcType=UNDEFINED},
+		#{associateFlag,jdbcType=UNDEFINED},
+		#{awardDate,jdbcType=UNDEFINED},
+		#{originalPermitNumber,jdbcType=UNDEFINED},
+		#{permitDate,jdbcType=UNDEFINED},
+		#{url,jdbcType=UNDEFINED},
+		#{bigWrap,jdbcType=UNDEFINED},
+		#{averageDayEat,jdbcType=UNDEFINED},
+		#{importFlag,jdbcType=UNDEFINED},
+		#{checkUser,jdbcType=UNDEFINED},
+		#{checkDate,jdbcType=UNDEFINED},
+		#{createUser,jdbcType=UNDEFINED},
+		#{createDate,jdbcType=UNDEFINED},
+		#{createPlat,jdbcType=UNDEFINED},
+		#{createOrg,jdbcType=UNDEFINED},
+		#{lastUpdateUser,jdbcType=UNDEFINED},
+		#{lastUpdateDate,jdbcType=UNDEFINED},
+		#{lastUpdatePlat,jdbcType=UNDEFINED},
+		#{lastUpdateOrg,jdbcType=UNDEFINED},
+		#{readyFlag,jdbcType=UNDEFINED},
+		#{certificateNumber,jdbcType=UNDEFINED},
+		#{doseageFormName,jdbcType=UNDEFINED},
+		#{userDesc,jdbcType=UNDEFINED},
+		#{productClass,jdbcType=UNDEFINED},
+		#{insuredDrugType,jdbcType=UNDEFINED},
+		#{insuredDrugNubmer,jdbcType=UNDEFINED},
+		#{bulletinDrugName,jdbcType=UNDEFINED},
+		#{bulletinModeName,jdbcType=UNDEFINED},
+		#{bulletinSpec,jdbcType=UNDEFINED},
+		#{platType,jdbcType=UNDEFINED},
+		#{insuranceType,jdbcType=UNDEFINED},
+		#{bWrap,jdbcType=UNDEFINED},
+		#{sWrap,jdbcType=UNDEFINED},
+		#{smallestUnits,jdbcType=UNDEFINED},
+		#{gmpNumber,jdbcType=UNDEFINED},
+		#{standardsNumber,jdbcType=UNDEFINED},
+		#{foreignFlag,jdbcType=UNDEFINED},
+		#{runDate,jdbcType=UNDEFINED},
+		#{medicalId,jdbcType=UNDEFINED},
+		#{medicalName,jdbcType=UNDEFINED},
+		#{medicalType,jdbcType=UNDEFINED},
+		#{centerProductLast,jdbcType=UNDEFINED},
+		#{centerDrugLast,jdbcType=UNDEFINED},
+		#{centerEnableFlag,jdbcType=UNDEFINED},
+		#{centerCheckFlag,jdbcType=UNDEFINED},
+		#{normPrice,jdbcType=UNDEFINED},
+		#{bidFlag,jdbcType=UNDEFINED},
+		#{manufactureName,jdbcType=UNDEFINED},
+		#{medicelFlag,jdbcType=UNDEFINED},
+		#{diffPriceFlag,jdbcType=UNDEFINED},
+		#{diffPriceText,jdbcType=UNDEFINED},
+		#{dataUseMax,jdbcType=UNDEFINED},
+		#{dataUseMin,jdbcType=UNDEFINED},
+		#{dataNumMax,jdbcType=UNDEFINED},
+		#{dataNumMin,jdbcType=UNDEFINED},
+		#{fromCentralData,jdbcType=UNDEFINED},
+		#{fromTradeFlag,jdbcType=UNDEFINED},
+		#{categoryBelong,jdbcType=UNDEFINED},
+		#{standardsEditNumber,jdbcType=UNDEFINED},
+		#{standardsIsFlag,jdbcType=UNDEFINED},
+		#{gmpEditNumber,jdbcType=UNDEFINED},
+		#{gmpIsFlag,jdbcType=UNDEFINED},
+		#{permitEditNumber,jdbcType=UNDEFINED},
+		#{permitIsFlag,jdbcType=UNDEFINED},
+		#{bidFlagEnter,jdbcType=UNDEFINED},
+		#{bidBox1,jdbcType=UNDEFINED},
+		#{zScore,jdbcType=UNDEFINED},
+		#{year1,jdbcType=UNDEFINED},
+		#{price1,jdbcType=UNDEFINED},
+		#{desc1,jdbcType=UNDEFINED},
+		#{year2,jdbcType=UNDEFINED},
+		#{price2,jdbcType=UNDEFINED},
+		#{desc2,jdbcType=UNDEFINED},
+		#{normPriceFrom,jdbcType=UNDEFINED},
+		#{isJy,jdbcType=UNDEFINED},
+		#{jyDirectory,jdbcType=UNDEFINED},
+		#{isQc,jdbcType=UNDEFINED},
+		#{isDzjg,jdbcType=UNDEFINED},
+		#{isDdzl,jdbcType=UNDEFINED},
+		#{medicalJyNum,jdbcType=UNDEFINED},
+		#{province4,jdbcType=UNDEFINED},
+		#{pricetype4,jdbcType=UNDEFINED},
+		#{bz4,jdbcType=UNDEFINED},
+		#{priceClarify,jdbcType=UNDEFINED},
+		#{medicalJyDate,jdbcType=UNDEFINED},
+		#{medicalJkNum,jdbcType=UNDEFINED},
+		#{medicalJkDate,jdbcType=UNDEFINED},
+		#{productionNum,jdbcType=UNDEFINED},
+		#{productionDate,jdbcType=UNDEFINED},
+		#{catalogId,jdbcType=UNDEFINED},
+		#{tdFacotry,jdbcType=UNDEFINED},
+		#{tdProductPrice,jdbcType=UNDEFINED},
+		#{beijingSelect,jdbcType=UNDEFINED},
+		#{ylyGmp,jdbcType=UNDEFINED},
+		#{zycGap,jdbcType=UNDEFINED},
+		#{productRank,jdbcType=UNDEFINED},
+		#{isPsur,jdbcType=UNDEFINED},
+		#{isBad,jdbcType=UNDEFINED},
+		#{badFileNo,jdbcType=UNDEFINED},
+		#{aveDateNum,jdbcType=UNDEFINED},
+		#{medicalJyYj,jdbcType=UNDEFINED},
+		#{isDjy,jdbcType=UNDEFINED},
+		#{beijingTradeJe,jdbcType=UNDEFINED},
+		#{updateFlag,jdbcType=UNDEFINED},
+		#{linkRemark,jdbcType=UNDEFINED},
+		#{updateRemark,jdbcType=UNDEFINED},
+		#{province,jdbcType=UNDEFINED},
+		#{ylgmpNo,jdbcType=UNDEFINED},
+		#{sfdaLink,jdbcType=UNDEFINED},
+		#{date2,jdbcType=UNDEFINED},
+		#{noPrice,jdbcType=UNDEFINED},
+		#{updateUser,jdbcType=UNDEFINED},
+		#{linkDate,jdbcType=UNDEFINED},
+		#{updateDate,jdbcType=UNDEFINED},
+		#{selfprice,jdbcType=UNDEFINED},
+		#{officialnotice,jdbcType=UNDEFINED},
+		#{picsGmp,jdbcType=UNDEFINED},
+		#{priceRightFlag,jdbcType=UNDEFINED},
+		#{agencyorgdate,jdbcType=UNDEFINED},
+		#{useUnit,jdbcType=UNDEFINED},
+		#{linkUser,jdbcType=UNDEFINED},
+		#{catalogIdLx,jdbcType=UNDEFINED},
+		#{noProduce,jdbcType=UNDEFINED},
+		#{improtOrgid,jdbcType=UNDEFINED},
+		#{inputFlag,jdbcType=UNDEFINED},
+		#{inputPrice,jdbcType=UNDEFINED},
+		#{inputBz,jdbcType=UNDEFINED},
+		#{varPrice,jdbcType=UNDEFINED},
+		#{reckonPrice,jdbcType=UNDEFINED},
+		#{priceBz2,jdbcType=UNDEFINED},
+		#{priceBz3,jdbcType=UNDEFINED},
+		#{minPrice,jdbcType=UNDEFINED},
+		#{specNd,jdbcType=UNDEFINED},
+		#{specValue,jdbcType=UNDEFINED},
+		#{beijingPrice,jdbcType=UNDEFINED},
+		#{year3,jdbcType=UNDEFINED},
+		#{desc3,jdbcType=UNDEFINED},
+		#{price3,jdbcType=UNDEFINED},
+		#{province3,jdbcType=UNDEFINED},
+		#{date3,jdbcType=UNDEFINED},
+		#{bz3,jdbcType=UNDEFINED},
+		#{flag3,jdbcType=UNDEFINED},
+		#{affirm3,jdbcType=UNDEFINED},
+		#{submit3,jdbcType=UNDEFINED},
+		#{jstype3,jdbcType=UNDEFINED},
+		#{spec3,jdbcType=UNDEFINED},
+		#{dbprice3,jdbcType=UNDEFINED},
+		#{submitdate3,jdbcType=UNDEFINED},
+		#{catalogArea,jdbcType=UNDEFINED},
+		#{clarify,jdbcType=UNDEFINED},
+		#{price4,jdbcType=UNDEFINED},
+		#{id,jdbcType=UNDEFINED},
+		#{dataProductId,jdbcType=UNDEFINED},
+		#{categoryId,jdbcType=UNDEFINED},
+		#{code,jdbcType=UNDEFINED},
+		#{code12Id,jdbcType=UNDEFINED},
+		#{code16Id,jdbcType=UNDEFINED},
+		#{code18Id,jdbcType=UNDEFINED},
+		#{doseageFormCode,jdbcType=UNDEFINED},
+		#{saltCode,jdbcType=UNDEFINED},
+		#{nameChn,jdbcType=UNDEFINED},
+		#{nameEng,jdbcType=UNDEFINED},
+		#{spellAbbr2,jdbcType=UNDEFINED},
+		#{nameWb2,jdbcType=UNDEFINED},
+		#{spec,jdbcType=UNDEFINED},
+		#{standRate,jdbcType=UNDEFINED},
+		#{prescription,jdbcType=UNDEFINED},
+		#{nationalInsuranceDrug,jdbcType=UNDEFINED},
+		#{insuranceNo,jdbcType=UNDEFINED},
+		#{nationalBasicDrug,jdbcType=UNDEFINED},
+		#{doseageDesc,jdbcType=UNDEFINED},
+		#{drugSerialNumber,jdbcType=UNDEFINED},
+		#{drugProperty,jdbcType=UNDEFINED},
+		#{wrapUnit,jdbcType=UNDEFINED},
+		#{wrapNum,jdbcType=UNDEFINED},
+		#{weightUnit,jdbcType=UNDEFINED},
+		#{weightNum,jdbcType=UNDEFINED},
+		#{contentUnit,jdbcType=UNDEFINED},
+		#{contentNum,jdbcType=UNDEFINED},
+		#{archiveNum2,jdbcType=UNDEFINED},
+		#{criterionType,jdbcType=UNDEFINED},
+		#{criterionNum,jdbcType=UNDEFINED},
+		#{manufactureId,jdbcType=UNDEFINED},
+		#{productCode,jdbcType=UNDEFINED},
+		#{tradeName,jdbcType=UNDEFINED},
+		#{memberType,jdbcType=UNDEFINED},
+		#{spellAbbr,jdbcType=UNDEFINED},
+		#{nameWb,jdbcType=UNDEFINED},
+		#{nationalRetailPrice,jdbcType=UNDEFINED},
+		#{priceType,jdbcType=UNDEFINED},
+		#{permitNumber,jdbcType=UNDEFINED},
+		#{expiryDate,jdbcType=UNDEFINED},
+		#{materialSource,jdbcType=UNDEFINED},
+		#{productSource,jdbcType=UNDEFINED},
+		#{importDrugLicenceNumber,jdbcType=UNDEFINED},
+		#{importLicenceExpiryDate,jdbcType=UNDEFINED},
+		#{materialQualityGrade,jdbcType=UNDEFINED},
+		#{gmpFlag,jdbcType=UNDEFINED},
+		#{highFlag,jdbcType=UNDEFINED},
+		#{qualityCode,jdbcType=UNDEFINED},
+		#{wrapCode,jdbcType=UNDEFINED},
+		#{wrapName,jdbcType=UNDEFINED},
+		#{wrapDesc,jdbcType=UNDEFINED},
+		#{newDrugFlag,jdbcType=UNDEFINED},
+		#{newDrugStartDate,jdbcType=UNDEFINED},
+		#{newDrugEndDate,jdbcType=UNDEFINED},
+		#{consignFlag,jdbcType=UNDEFINED},
+		#{consignCompanyName,jdbcType=UNDEFINED},
+		#{consignExpiryDate,jdbcType=UNDEFINED},
+		#{generalAgentId,jdbcType=UNDEFINED},
+		#{generalAgentName,jdbcType=UNDEFINED},
+		#{middleStandRate,jdbcType=UNDEFINED},
+		#{bigMiddleRate,jdbcType=UNDEFINED},
+		#{useUnit1,jdbcType=UNDEFINED},
+		#{specUnit,jdbcType=UNDEFINED},
+		#{remark,jdbcType=UNDEFINED},
+		#{checkFlag,jdbcType=UNDEFINED},
+		#{checkRemark,jdbcType=UNDEFINED}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.catMark,jdbcType=UNDEFINED},
+		#{item.gapCno,jdbcType=UNDEFINED},
+		#{item.reckonFlag,jdbcType=UNDEFINED},
+		#{item.inputsFlag,jdbcType=UNDEFINED},
+		#{item.dataSource,jdbcType=UNDEFINED},
+		#{item.way4,jdbcType=UNDEFINED},
+		#{item.iszystate,jdbcType=UNDEFINED},
+		#{item.basicMedicant,jdbcType=UNDEFINED},
+		#{item.updateContent,jdbcType=UNDEFINED},
+		#{item.hospitalId,jdbcType=UNDEFINED},
+		#{item.hospitalName,jdbcType=UNDEFINED},
+		#{item.enableFlag,jdbcType=UNDEFINED},
+		#{item.sourceCountry,jdbcType=UNDEFINED},
+		#{item.synchronizedDate,jdbcType=UNDEFINED},
+		#{item.cleanDate,jdbcType=UNDEFINED},
+		#{item.createUsername,jdbcType=UNDEFINED},
+		#{item.lastUpdateUsername,jdbcType=UNDEFINED},
+		#{item.description,jdbcType=UNDEFINED},
+		#{item.lockFlag,jdbcType=UNDEFINED},
+		#{item.archiveNum,jdbcType=UNDEFINED},
+		#{item.associateFlag,jdbcType=UNDEFINED},
+		#{item.awardDate,jdbcType=UNDEFINED},
+		#{item.originalPermitNumber,jdbcType=UNDEFINED},
+		#{item.permitDate,jdbcType=UNDEFINED},
+		#{item.url,jdbcType=UNDEFINED},
+		#{item.bigWrap,jdbcType=UNDEFINED},
+		#{item.averageDayEat,jdbcType=UNDEFINED},
+		#{item.importFlag,jdbcType=UNDEFINED},
+		#{item.checkUser,jdbcType=UNDEFINED},
+		#{item.checkDate,jdbcType=UNDEFINED},
+		#{item.createUser,jdbcType=UNDEFINED},
+		#{item.createDate,jdbcType=UNDEFINED},
+		#{item.createPlat,jdbcType=UNDEFINED},
+		#{item.createOrg,jdbcType=UNDEFINED},
+		#{item.lastUpdateUser,jdbcType=UNDEFINED},
+		#{item.lastUpdateDate,jdbcType=UNDEFINED},
+		#{item.lastUpdatePlat,jdbcType=UNDEFINED},
+		#{item.lastUpdateOrg,jdbcType=UNDEFINED},
+		#{item.readyFlag,jdbcType=UNDEFINED},
+		#{item.certificateNumber,jdbcType=UNDEFINED},
+		#{item.doseageFormName,jdbcType=UNDEFINED},
+		#{item.userDesc,jdbcType=UNDEFINED},
+		#{item.productClass,jdbcType=UNDEFINED},
+		#{item.insuredDrugType,jdbcType=UNDEFINED},
+		#{item.insuredDrugNubmer,jdbcType=UNDEFINED},
+		#{item.bulletinDrugName,jdbcType=UNDEFINED},
+		#{item.bulletinModeName,jdbcType=UNDEFINED},
+		#{item.bulletinSpec,jdbcType=UNDEFINED},
+		#{item.platType,jdbcType=UNDEFINED},
+		#{item.insuranceType,jdbcType=UNDEFINED},
+		#{item.bWrap,jdbcType=UNDEFINED},
+		#{item.sWrap,jdbcType=UNDEFINED},
+		#{item.smallestUnits,jdbcType=UNDEFINED},
+		#{item.gmpNumber,jdbcType=UNDEFINED},
+		#{item.standardsNumber,jdbcType=UNDEFINED},
+		#{item.foreignFlag,jdbcType=UNDEFINED},
+		#{item.runDate,jdbcType=UNDEFINED},
+		#{item.medicalId,jdbcType=UNDEFINED},
+		#{item.medicalName,jdbcType=UNDEFINED},
+		#{item.medicalType,jdbcType=UNDEFINED},
+		#{item.centerProductLast,jdbcType=UNDEFINED},
+		#{item.centerDrugLast,jdbcType=UNDEFINED},
+		#{item.centerEnableFlag,jdbcType=UNDEFINED},
+		#{item.centerCheckFlag,jdbcType=UNDEFINED},
+		#{item.normPrice,jdbcType=UNDEFINED},
+		#{item.bidFlag,jdbcType=UNDEFINED},
+		#{item.manufactureName,jdbcType=UNDEFINED},
+		#{item.medicelFlag,jdbcType=UNDEFINED},
+		#{item.diffPriceFlag,jdbcType=UNDEFINED},
+		#{item.diffPriceText,jdbcType=UNDEFINED},
+		#{item.dataUseMax,jdbcType=UNDEFINED},
+		#{item.dataUseMin,jdbcType=UNDEFINED},
+		#{item.dataNumMax,jdbcType=UNDEFINED},
+		#{item.dataNumMin,jdbcType=UNDEFINED},
+		#{item.fromCentralData,jdbcType=UNDEFINED},
+		#{item.fromTradeFlag,jdbcType=UNDEFINED},
+		#{item.categoryBelong,jdbcType=UNDEFINED},
+		#{item.standardsEditNumber,jdbcType=UNDEFINED},
+		#{item.standardsIsFlag,jdbcType=UNDEFINED},
+		#{item.gmpEditNumber,jdbcType=UNDEFINED},
+		#{item.gmpIsFlag,jdbcType=UNDEFINED},
+		#{item.permitEditNumber,jdbcType=UNDEFINED},
+		#{item.permitIsFlag,jdbcType=UNDEFINED},
+		#{item.bidFlagEnter,jdbcType=UNDEFINED},
+		#{item.bidBox1,jdbcType=UNDEFINED},
+		#{item.zScore,jdbcType=UNDEFINED},
+		#{item.year1,jdbcType=UNDEFINED},
+		#{item.price1,jdbcType=UNDEFINED},
+		#{item.desc1,jdbcType=UNDEFINED},
+		#{item.year2,jdbcType=UNDEFINED},
+		#{item.price2,jdbcType=UNDEFINED},
+		#{item.desc2,jdbcType=UNDEFINED},
+		#{item.normPriceFrom,jdbcType=UNDEFINED},
+		#{item.isJy,jdbcType=UNDEFINED},
+		#{item.jyDirectory,jdbcType=UNDEFINED},
+		#{item.isQc,jdbcType=UNDEFINED},
+		#{item.isDzjg,jdbcType=UNDEFINED},
+		#{item.isDdzl,jdbcType=UNDEFINED},
+		#{item.medicalJyNum,jdbcType=UNDEFINED},
+		#{item.province4,jdbcType=UNDEFINED},
+		#{item.pricetype4,jdbcType=UNDEFINED},
+		#{item.bz4,jdbcType=UNDEFINED},
+		#{item.priceClarify,jdbcType=UNDEFINED},
+		#{item.medicalJyDate,jdbcType=UNDEFINED},
+		#{item.medicalJkNum,jdbcType=UNDEFINED},
+		#{item.medicalJkDate,jdbcType=UNDEFINED},
+		#{item.productionNum,jdbcType=UNDEFINED},
+		#{item.productionDate,jdbcType=UNDEFINED},
+		#{item.catalogId,jdbcType=UNDEFINED},
+		#{item.tdFacotry,jdbcType=UNDEFINED},
+		#{item.tdProductPrice,jdbcType=UNDEFINED},
+		#{item.beijingSelect,jdbcType=UNDEFINED},
+		#{item.ylyGmp,jdbcType=UNDEFINED},
+		#{item.zycGap,jdbcType=UNDEFINED},
+		#{item.productRank,jdbcType=UNDEFINED},
+		#{item.isPsur,jdbcType=UNDEFINED},
+		#{item.isBad,jdbcType=UNDEFINED},
+		#{item.badFileNo,jdbcType=UNDEFINED},
+		#{item.aveDateNum,jdbcType=UNDEFINED},
+		#{item.medicalJyYj,jdbcType=UNDEFINED},
+		#{item.isDjy,jdbcType=UNDEFINED},
+		#{item.beijingTradeJe,jdbcType=UNDEFINED},
+		#{item.updateFlag,jdbcType=UNDEFINED},
+		#{item.linkRemark,jdbcType=UNDEFINED},
+		#{item.updateRemark,jdbcType=UNDEFINED},
+		#{item.province,jdbcType=UNDEFINED},
+		#{item.ylgmpNo,jdbcType=UNDEFINED},
+		#{item.sfdaLink,jdbcType=UNDEFINED},
+		#{item.date2,jdbcType=UNDEFINED},
+		#{item.noPrice,jdbcType=UNDEFINED},
+		#{item.updateUser,jdbcType=UNDEFINED},
+		#{item.linkDate,jdbcType=UNDEFINED},
+		#{item.updateDate,jdbcType=UNDEFINED},
+		#{item.selfprice,jdbcType=UNDEFINED},
+		#{item.officialnotice,jdbcType=UNDEFINED},
+		#{item.picsGmp,jdbcType=UNDEFINED},
+		#{item.priceRightFlag,jdbcType=UNDEFINED},
+		#{item.agencyorgdate,jdbcType=UNDEFINED},
+		#{item.useUnit,jdbcType=UNDEFINED},
+		#{item.linkUser,jdbcType=UNDEFINED},
+		#{item.catalogIdLx,jdbcType=UNDEFINED},
+		#{item.noProduce,jdbcType=UNDEFINED},
+		#{item.improtOrgid,jdbcType=UNDEFINED},
+		#{item.inputFlag,jdbcType=UNDEFINED},
+		#{item.inputPrice,jdbcType=UNDEFINED},
+		#{item.inputBz,jdbcType=UNDEFINED},
+		#{item.varPrice,jdbcType=UNDEFINED},
+		#{item.reckonPrice,jdbcType=UNDEFINED},
+		#{item.priceBz2,jdbcType=UNDEFINED},
+		#{item.priceBz3,jdbcType=UNDEFINED},
+		#{item.minPrice,jdbcType=UNDEFINED},
+		#{item.specNd,jdbcType=UNDEFINED},
+		#{item.specValue,jdbcType=UNDEFINED},
+		#{item.beijingPrice,jdbcType=UNDEFINED},
+		#{item.year3,jdbcType=UNDEFINED},
+		#{item.desc3,jdbcType=UNDEFINED},
+		#{item.price3,jdbcType=UNDEFINED},
+		#{item.province3,jdbcType=UNDEFINED},
+		#{item.date3,jdbcType=UNDEFINED},
+		#{item.bz3,jdbcType=UNDEFINED},
+		#{item.flag3,jdbcType=UNDEFINED},
+		#{item.affirm3,jdbcType=UNDEFINED},
+		#{item.submit3,jdbcType=UNDEFINED},
+		#{item.jstype3,jdbcType=UNDEFINED},
+		#{item.spec3,jdbcType=UNDEFINED},
+		#{item.dbprice3,jdbcType=UNDEFINED},
+		#{item.submitdate3,jdbcType=UNDEFINED},
+		#{item.catalogArea,jdbcType=UNDEFINED},
+		#{item.clarify,jdbcType=UNDEFINED},
+		#{item.price4,jdbcType=UNDEFINED},
+		#{item.id,jdbcType=UNDEFINED},
+		#{item.dataProductId,jdbcType=UNDEFINED},
+		#{item.categoryId,jdbcType=UNDEFINED},
+		#{item.code,jdbcType=UNDEFINED},
+		#{item.code12Id,jdbcType=UNDEFINED},
+		#{item.code16Id,jdbcType=UNDEFINED},
+		#{item.code18Id,jdbcType=UNDEFINED},
+		#{item.doseageFormCode,jdbcType=UNDEFINED},
+		#{item.saltCode,jdbcType=UNDEFINED},
+		#{item.nameChn,jdbcType=UNDEFINED},
+		#{item.nameEng,jdbcType=UNDEFINED},
+		#{item.spellAbbr2,jdbcType=UNDEFINED},
+		#{item.nameWb2,jdbcType=UNDEFINED},
+		#{item.spec,jdbcType=UNDEFINED},
+		#{item.standRate,jdbcType=UNDEFINED},
+		#{item.prescription,jdbcType=UNDEFINED},
+		#{item.nationalInsuranceDrug,jdbcType=UNDEFINED},
+		#{item.insuranceNo,jdbcType=UNDEFINED},
+		#{item.nationalBasicDrug,jdbcType=UNDEFINED},
+		#{item.doseageDesc,jdbcType=UNDEFINED},
+		#{item.drugSerialNumber,jdbcType=UNDEFINED},
+		#{item.drugProperty,jdbcType=UNDEFINED},
+		#{item.wrapUnit,jdbcType=UNDEFINED},
+		#{item.wrapNum,jdbcType=UNDEFINED},
+		#{item.weightUnit,jdbcType=UNDEFINED},
+		#{item.weightNum,jdbcType=UNDEFINED},
+		#{item.contentUnit,jdbcType=UNDEFINED},
+		#{item.contentNum,jdbcType=UNDEFINED},
+		#{item.archiveNum2,jdbcType=UNDEFINED},
+		#{item.criterionType,jdbcType=UNDEFINED},
+		#{item.criterionNum,jdbcType=UNDEFINED},
+		#{item.manufactureId,jdbcType=UNDEFINED},
+		#{item.productCode,jdbcType=UNDEFINED},
+		#{item.tradeName,jdbcType=UNDEFINED},
+		#{item.memberType,jdbcType=UNDEFINED},
+		#{item.spellAbbr,jdbcType=UNDEFINED},
+		#{item.nameWb,jdbcType=UNDEFINED},
+		#{item.nationalRetailPrice,jdbcType=UNDEFINED},
+		#{item.priceType,jdbcType=UNDEFINED},
+		#{item.permitNumber,jdbcType=UNDEFINED},
+		#{item.expiryDate,jdbcType=UNDEFINED},
+		#{item.materialSource,jdbcType=UNDEFINED},
+		#{item.productSource,jdbcType=UNDEFINED},
+		#{item.importDrugLicenceNumber,jdbcType=UNDEFINED},
+		#{item.importLicenceExpiryDate,jdbcType=UNDEFINED},
+		#{item.materialQualityGrade,jdbcType=UNDEFINED},
+		#{item.gmpFlag,jdbcType=UNDEFINED},
+		#{item.highFlag,jdbcType=UNDEFINED},
+		#{item.qualityCode,jdbcType=UNDEFINED},
+		#{item.wrapCode,jdbcType=UNDEFINED},
+		#{item.wrapName,jdbcType=UNDEFINED},
+		#{item.wrapDesc,jdbcType=UNDEFINED},
+		#{item.newDrugFlag,jdbcType=UNDEFINED},
+		#{item.newDrugStartDate,jdbcType=UNDEFINED},
+		#{item.newDrugEndDate,jdbcType=UNDEFINED},
+		#{item.consignFlag,jdbcType=UNDEFINED},
+		#{item.consignCompanyName,jdbcType=UNDEFINED},
+		#{item.consignExpiryDate,jdbcType=UNDEFINED},
+		#{item.generalAgentId,jdbcType=UNDEFINED},
+		#{item.generalAgentName,jdbcType=UNDEFINED},
+		#{item.middleStandRate,jdbcType=UNDEFINED},
+		#{item.bigMiddleRate,jdbcType=UNDEFINED},
+		#{item.useUnit1,jdbcType=UNDEFINED},
+		#{item.specUnit,jdbcType=UNDEFINED},
+		#{item.remark,jdbcType=UNDEFINED},
+		#{item.checkFlag,jdbcType=UNDEFINED},
+		#{item.checkRemark,jdbcType=UNDEFINED}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model..ProductInfo" useGeneratedKeys="true" keyProperty="id">
+		insert into product_info( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into product_info( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from product_info
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from product_info
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model..ProductInfo">
+		update product_info 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="catMark != null and catMark != ''">cat_mark = #{catMark},</if>
+			<if test="gapCno != null and gapCno != ''">gap_cno = #{gapCno},</if>
+			<if test="reckonFlag != null and reckonFlag != ''">reckon_flag = #{reckonFlag},</if>
+			<if test="inputsFlag != null and inputsFlag != ''">inputs_flag = #{inputsFlag},</if>
+			<if test="dataSource != null and dataSource != ''">data_source = #{dataSource},</if>
+			<if test="way4 != null and way4 != ''">way4 = #{way4},</if>
+			<if test="iszystate != null and iszystate != ''">iszystate = #{iszystate},</if>
+			<if test="basicMedicant != null and basicMedicant != ''">basic_medicant = #{basicMedicant},</if>
+			<if test="updateContent != null and updateContent != ''">update_content = #{updateContent},</if>
+			<if test="hospitalId != null and hospitalId != ''">hospital_id = #{hospitalId},</if>
+			<if test="hospitalName != null and hospitalName != ''">hospital_name = #{hospitalName},</if>
+			<if test="enableFlag != null and enableFlag != ''">enable_flag = #{enableFlag},</if>
+			<if test="sourceCountry != null and sourceCountry != ''">source_country = #{sourceCountry},</if>
+			<if test="synchronizedDate != null and synchronizedDate != ''">synchronized_date = #{synchronizedDate},</if>
+			<if test="cleanDate != null and cleanDate != ''">clean_date = #{cleanDate},</if>
+			<if test="createUsername != null and createUsername != ''">create_username = #{createUsername},</if>
+			<if test="lastUpdateUsername != null and lastUpdateUsername != ''">last_update_username = #{lastUpdateUsername},</if>
+			<if test="description != null and description != ''">description = #{description},</if>
+			<if test="lockFlag != null and lockFlag != ''">lock_flag = #{lockFlag},</if>
+			<if test="archiveNum != null and archiveNum != ''">archive_num = #{archiveNum},</if>
+			<if test="associateFlag != null and associateFlag != ''">associate_flag = #{associateFlag},</if>
+			<if test="awardDate != null and awardDate != ''">award_date = #{awardDate},</if>
+			<if test="originalPermitNumber != null and originalPermitNumber != ''">original_permit_number = #{originalPermitNumber},</if>
+			<if test="permitDate != null and permitDate != ''">permit_date = #{permitDate},</if>
+			<if test="url != null and url != ''">url = #{url},</if>
+			<if test="bigWrap != null and bigWrap != ''">big_wrap = #{bigWrap},</if>
+			<if test="averageDayEat != null and averageDayEat != ''">average_day_eat = #{averageDayEat},</if>
+			<if test="importFlag != null and importFlag != ''">import_flag = #{importFlag},</if>
+			<if test="checkUser != null and checkUser != ''">check_user = #{checkUser},</if>
+			<if test="checkDate != null and checkDate != ''">check_date = #{checkDate},</if>
+			<if test="createUser != null and createUser != ''">create_user = #{createUser},</if>
+			<if test="createDate != null and createDate != ''">create_date = #{createDate},</if>
+			<if test="createPlat != null and createPlat != ''">create_plat = #{createPlat},</if>
+			<if test="createOrg != null and createOrg != ''">create_org = #{createOrg},</if>
+			<if test="lastUpdateUser != null and lastUpdateUser != ''">last_update_user = #{lastUpdateUser},</if>
+			<if test="lastUpdateDate != null and lastUpdateDate != ''">last_update_date = #{lastUpdateDate},</if>
+			<if test="lastUpdatePlat != null and lastUpdatePlat != ''">last_update_plat = #{lastUpdatePlat},</if>
+			<if test="lastUpdateOrg != null and lastUpdateOrg != ''">last_update_org = #{lastUpdateOrg},</if>
+			<if test="readyFlag != null and readyFlag != ''">ready_flag = #{readyFlag},</if>
+			<if test="certificateNumber != null and certificateNumber != ''">certificate_number = #{certificateNumber},</if>
+			<if test="doseageFormName != null and doseageFormName != ''">doseage_form_name = #{doseageFormName},</if>
+			<if test="userDesc != null and userDesc != ''">user_desc = #{userDesc},</if>
+			<if test="productClass != null and productClass != ''">product_class = #{productClass},</if>
+			<if test="insuredDrugType != null and insuredDrugType != ''">insured_drug_type = #{insuredDrugType},</if>
+			<if test="insuredDrugNubmer != null and insuredDrugNubmer != ''">insured_drug_nubmer = #{insuredDrugNubmer},</if>
+			<if test="bulletinDrugName != null and bulletinDrugName != ''">bulletin_drug_name = #{bulletinDrugName},</if>
+			<if test="bulletinModeName != null and bulletinModeName != ''">bulletin_mode_name = #{bulletinModeName},</if>
+			<if test="bulletinSpec != null and bulletinSpec != ''">bulletin_spec = #{bulletinSpec},</if>
+			<if test="platType != null and platType != ''">plat_type = #{platType},</if>
+			<if test="insuranceType != null and insuranceType != ''">insurance_type = #{insuranceType},</if>
+			<if test="bWrap != null and bWrap != ''">b_wrap = #{bWrap},</if>
+			<if test="sWrap != null and sWrap != ''">s_wrap = #{sWrap},</if>
+			<if test="smallestUnits != null and smallestUnits != ''">smallest_units = #{smallestUnits},</if>
+			<if test="gmpNumber != null and gmpNumber != ''">gmp_number = #{gmpNumber},</if>
+			<if test="standardsNumber != null and standardsNumber != ''">standards_number = #{standardsNumber},</if>
+			<if test="foreignFlag != null and foreignFlag != ''">foreign_flag = #{foreignFlag},</if>
+			<if test="runDate != null and runDate != ''">run_date = #{runDate},</if>
+			<if test="medicalId != null and medicalId != ''">medical_id = #{medicalId},</if>
+			<if test="medicalName != null and medicalName != ''">medical_name = #{medicalName},</if>
+			<if test="medicalType != null and medicalType != ''">medical_type = #{medicalType},</if>
+			<if test="centerProductLast != null and centerProductLast != ''">center_product_last = #{centerProductLast},</if>
+			<if test="centerDrugLast != null and centerDrugLast != ''">center_drug_last = #{centerDrugLast},</if>
+			<if test="centerEnableFlag != null and centerEnableFlag != ''">center_enable_flag = #{centerEnableFlag},</if>
+			<if test="centerCheckFlag != null and centerCheckFlag != ''">center_check_flag = #{centerCheckFlag},</if>
+			<if test="normPrice != null and normPrice != ''">norm_price = #{normPrice},</if>
+			<if test="bidFlag != null and bidFlag != ''">bid_flag = #{bidFlag},</if>
+			<if test="manufactureName != null and manufactureName != ''">manufacture_name = #{manufactureName},</if>
+			<if test="medicelFlag != null and medicelFlag != ''">medicel_flag = #{medicelFlag},</if>
+			<if test="diffPriceFlag != null and diffPriceFlag != ''">diff_price_flag = #{diffPriceFlag},</if>
+			<if test="diffPriceText != null and diffPriceText != ''">diff_price_text = #{diffPriceText},</if>
+			<if test="dataUseMax != null and dataUseMax != ''">data_use_max = #{dataUseMax},</if>
+			<if test="dataUseMin != null and dataUseMin != ''">data_use_min = #{dataUseMin},</if>
+			<if test="dataNumMax != null and dataNumMax != ''">data_num_max = #{dataNumMax},</if>
+			<if test="dataNumMin != null and dataNumMin != ''">data_num_min = #{dataNumMin},</if>
+			<if test="fromCentralData != null and fromCentralData != ''">from_central_data = #{fromCentralData},</if>
+			<if test="fromTradeFlag != null and fromTradeFlag != ''">from_trade_flag = #{fromTradeFlag},</if>
+			<if test="categoryBelong != null and categoryBelong != ''">category_belong = #{categoryBelong},</if>
+			<if test="standardsEditNumber != null and standardsEditNumber != ''">standards_edit_number = #{standardsEditNumber},</if>
+			<if test="standardsIsFlag != null and standardsIsFlag != ''">standards_is_flag = #{standardsIsFlag},</if>
+			<if test="gmpEditNumber != null and gmpEditNumber != ''">gmp_edit_number = #{gmpEditNumber},</if>
+			<if test="gmpIsFlag != null and gmpIsFlag != ''">gmp_is_flag = #{gmpIsFlag},</if>
+			<if test="permitEditNumber != null and permitEditNumber != ''">permit_edit_number = #{permitEditNumber},</if>
+			<if test="permitIsFlag != null and permitIsFlag != ''">permit_is_flag = #{permitIsFlag},</if>
+			<if test="bidFlagEnter != null and bidFlagEnter != ''">bid_flag_enter = #{bidFlagEnter},</if>
+			<if test="bidBox1 != null and bidBox1 != ''">bid_box1 = #{bidBox1},</if>
+			<if test="zScore != null and zScore != ''">z_score = #{zScore},</if>
+			<if test="year1 != null and year1 != ''">year1 = #{year1},</if>
+			<if test="price1 != null and price1 != ''">price1 = #{price1},</if>
+			<if test="desc1 != null and desc1 != ''">desc1 = #{desc1},</if>
+			<if test="year2 != null and year2 != ''">year2 = #{year2},</if>
+			<if test="price2 != null and price2 != ''">price2 = #{price2},</if>
+			<if test="desc2 != null and desc2 != ''">desc2 = #{desc2},</if>
+			<if test="normPriceFrom != null and normPriceFrom != ''">norm_price_from = #{normPriceFrom},</if>
+			<if test="isJy != null and isJy != ''">is_jy = #{isJy},</if>
+			<if test="jyDirectory != null and jyDirectory != ''">jy_directory = #{jyDirectory},</if>
+			<if test="isQc != null and isQc != ''">is_qc = #{isQc},</if>
+			<if test="isDzjg != null and isDzjg != ''">is_dzjg = #{isDzjg},</if>
+			<if test="isDdzl != null and isDdzl != ''">is_ddzl = #{isDdzl},</if>
+			<if test="medicalJyNum != null and medicalJyNum != ''">medical_jy_num = #{medicalJyNum},</if>
+			<if test="province4 != null and province4 != ''">province4 = #{province4},</if>
+			<if test="pricetype4 != null and pricetype4 != ''">pricetype4 = #{pricetype4},</if>
+			<if test="bz4 != null and bz4 != ''">bz4 = #{bz4},</if>
+			<if test="priceClarify != null and priceClarify != ''">price_clarify = #{priceClarify},</if>
+			<if test="medicalJyDate != null and medicalJyDate != ''">medical_jy_date = #{medicalJyDate},</if>
+			<if test="medicalJkNum != null and medicalJkNum != ''">medical_jk_num = #{medicalJkNum},</if>
+			<if test="medicalJkDate != null and medicalJkDate != ''">medical_jk_date = #{medicalJkDate},</if>
+			<if test="productionNum != null and productionNum != ''">production_num = #{productionNum},</if>
+			<if test="productionDate != null and productionDate != ''">production_date = #{productionDate},</if>
+			<if test="catalogId != null and catalogId != ''">catalog_id = #{catalogId},</if>
+			<if test="tdFacotry != null and tdFacotry != ''">td_facotry = #{tdFacotry},</if>
+			<if test="tdProductPrice != null and tdProductPrice != ''">td_product_price = #{tdProductPrice},</if>
+			<if test="beijingSelect != null and beijingSelect != ''">beijing_select = #{beijingSelect},</if>
+			<if test="ylyGmp != null and ylyGmp != ''">yly_gmp = #{ylyGmp},</if>
+			<if test="zycGap != null and zycGap != ''">zyc_gap = #{zycGap},</if>
+			<if test="productRank != null and productRank != ''">product_rank = #{productRank},</if>
+			<if test="isPsur != null and isPsur != ''">is_psur = #{isPsur},</if>
+			<if test="isBad != null and isBad != ''">is_bad = #{isBad},</if>
+			<if test="badFileNo != null and badFileNo != ''">bad_file_no = #{badFileNo},</if>
+			<if test="aveDateNum != null and aveDateNum != ''">ave_date_num = #{aveDateNum},</if>
+			<if test="medicalJyYj != null and medicalJyYj != ''">medical_jy_yj = #{medicalJyYj},</if>
+			<if test="isDjy != null and isDjy != ''">is_djy = #{isDjy},</if>
+			<if test="beijingTradeJe != null and beijingTradeJe != ''">beijing_trade_je = #{beijingTradeJe},</if>
+			<if test="updateFlag != null and updateFlag != ''">update_flag = #{updateFlag},</if>
+			<if test="linkRemark != null and linkRemark != ''">link_remark = #{linkRemark},</if>
+			<if test="updateRemark != null and updateRemark != ''">update_remark = #{updateRemark},</if>
+			<if test="province != null and province != ''">province = #{province},</if>
+			<if test="ylgmpNo != null and ylgmpNo != ''">ylgmp_no = #{ylgmpNo},</if>
+			<if test="sfdaLink != null and sfdaLink != ''">sfda_link = #{sfdaLink},</if>
+			<if test="date2 != null and date2 != ''">date2 = #{date2},</if>
+			<if test="noPrice != null and noPrice != ''">no_price = #{noPrice},</if>
+			<if test="updateUser != null and updateUser != ''">update_user = #{updateUser},</if>
+			<if test="linkDate != null and linkDate != ''">link_date = #{linkDate},</if>
+			<if test="updateDate != null and updateDate != ''">update_date = #{updateDate},</if>
+			<if test="selfprice != null and selfprice != ''">selfprice = #{selfprice},</if>
+			<if test="officialnotice != null and officialnotice != ''">officialnotice = #{officialnotice},</if>
+			<if test="picsGmp != null and picsGmp != ''">pics_gmp = #{picsGmp},</if>
+			<if test="priceRightFlag != null and priceRightFlag != ''">price_right_flag = #{priceRightFlag},</if>
+			<if test="agencyorgdate != null and agencyorgdate != ''">agencyorgdate = #{agencyorgdate},</if>
+			<if test="useUnit != null and useUnit != ''">use_unit = #{useUnit},</if>
+			<if test="linkUser != null and linkUser != ''">link_user = #{linkUser},</if>
+			<if test="catalogIdLx != null and catalogIdLx != ''">catalog_id_lx = #{catalogIdLx},</if>
+			<if test="noProduce != null and noProduce != ''">no_produce = #{noProduce},</if>
+			<if test="improtOrgid != null and improtOrgid != ''">improt_orgid = #{improtOrgid},</if>
+			<if test="inputFlag != null and inputFlag != ''">input_flag = #{inputFlag},</if>
+			<if test="inputPrice != null and inputPrice != ''">input_price = #{inputPrice},</if>
+			<if test="inputBz != null and inputBz != ''">input_bz = #{inputBz},</if>
+			<if test="varPrice != null and varPrice != ''">var_price = #{varPrice},</if>
+			<if test="reckonPrice != null and reckonPrice != ''">reckon_price = #{reckonPrice},</if>
+			<if test="priceBz2 != null and priceBz2 != ''">price_bz2 = #{priceBz2},</if>
+			<if test="priceBz3 != null and priceBz3 != ''">price_bz3 = #{priceBz3},</if>
+			<if test="minPrice != null and minPrice != ''">min_price = #{minPrice},</if>
+			<if test="specNd != null and specNd != ''">spec_nd = #{specNd},</if>
+			<if test="specValue != null and specValue != ''">spec_value = #{specValue},</if>
+			<if test="beijingPrice != null and beijingPrice != ''">beijing_price = #{beijingPrice},</if>
+			<if test="year3 != null and year3 != ''">year3 = #{year3},</if>
+			<if test="desc3 != null and desc3 != ''">desc3 = #{desc3},</if>
+			<if test="price3 != null and price3 != ''">price3 = #{price3},</if>
+			<if test="province3 != null and province3 != ''">province3 = #{province3},</if>
+			<if test="date3 != null and date3 != ''">date3 = #{date3},</if>
+			<if test="bz3 != null and bz3 != ''">bz3 = #{bz3},</if>
+			<if test="flag3 != null and flag3 != ''">flag3 = #{flag3},</if>
+			<if test="affirm3 != null and affirm3 != ''">affirm3 = #{affirm3},</if>
+			<if test="submit3 != null and submit3 != ''">submit3 = #{submit3},</if>
+			<if test="jstype3 != null and jstype3 != ''">jstype3 = #{jstype3},</if>
+			<if test="spec3 != null and spec3 != ''">spec3 = #{spec3},</if>
+			<if test="dbprice3 != null and dbprice3 != ''">dbprice3 = #{dbprice3},</if>
+			<if test="submitdate3 != null and submitdate3 != ''">submitdate3 = #{submitdate3},</if>
+			<if test="catalogArea != null and catalogArea != ''">catalog_area = #{catalogArea},</if>
+			<if test="clarify != null and clarify != ''">clarify = #{clarify},</if>
+			<if test="price4 != null and price4 != ''">price4 = #{price4},</if>
+			<if test="id != null and id != ''">id = #{id},</if>
+			<if test="dataProductId != null and dataProductId != ''">data_product_id = #{dataProductId},</if>
+			<if test="categoryId != null and categoryId != ''">category_id = #{categoryId},</if>
+			<if test="code != null and code != ''">code = #{code},</if>
+			<if test="code12Id != null and code12Id != ''">code12_id = #{code12Id},</if>
+			<if test="code16Id != null and code16Id != ''">code16_id = #{code16Id},</if>
+			<if test="code18Id != null and code18Id != ''">code18_id = #{code18Id},</if>
+			<if test="doseageFormCode != null and doseageFormCode != ''">doseage_form_code = #{doseageFormCode},</if>
+			<if test="saltCode != null and saltCode != ''">salt_code = #{saltCode},</if>
+			<if test="nameChn != null and nameChn != ''">name_chn = #{nameChn},</if>
+			<if test="nameEng != null and nameEng != ''">name_eng = #{nameEng},</if>
+			<if test="spellAbbr2 != null and spellAbbr2 != ''">spell_abbr2 = #{spellAbbr2},</if>
+			<if test="nameWb2 != null and nameWb2 != ''">name_wb2 = #{nameWb2},</if>
+			<if test="spec != null and spec != ''">spec = #{spec},</if>
+			<if test="standRate != null and standRate != ''">stand_rate = #{standRate},</if>
+			<if test="prescription != null and prescription != ''">prescription = #{prescription},</if>
+			<if test="nationalInsuranceDrug != null and nationalInsuranceDrug != ''">national_insurance_drug = #{nationalInsuranceDrug},</if>
+			<if test="insuranceNo != null and insuranceNo != ''">insurance_no = #{insuranceNo},</if>
+			<if test="nationalBasicDrug != null and nationalBasicDrug != ''">national_basic_drug = #{nationalBasicDrug},</if>
+			<if test="doseageDesc != null and doseageDesc != ''">doseage_desc = #{doseageDesc},</if>
+			<if test="drugSerialNumber != null and drugSerialNumber != ''">drug_serial_number = #{drugSerialNumber},</if>
+			<if test="drugProperty != null and drugProperty != ''">drug_property = #{drugProperty},</if>
+			<if test="wrapUnit != null and wrapUnit != ''">wrap_unit = #{wrapUnit},</if>
+			<if test="wrapNum != null and wrapNum != ''">wrap_num = #{wrapNum},</if>
+			<if test="weightUnit != null and weightUnit != ''">weight_unit = #{weightUnit},</if>
+			<if test="weightNum != null and weightNum != ''">weight_num = #{weightNum},</if>
+			<if test="contentUnit != null and contentUnit != ''">content_unit = #{contentUnit},</if>
+			<if test="contentNum != null and contentNum != ''">content_num = #{contentNum},</if>
+			<if test="archiveNum2 != null and archiveNum2 != ''">archive_num2 = #{archiveNum2},</if>
+			<if test="criterionType != null and criterionType != ''">criterion_type = #{criterionType},</if>
+			<if test="criterionNum != null and criterionNum != ''">criterion_num = #{criterionNum},</if>
+			<if test="manufactureId != null and manufactureId != ''">manufacture_id = #{manufactureId},</if>
+			<if test="productCode != null and productCode != ''">product_code = #{productCode},</if>
+			<if test="tradeName != null and tradeName != ''">trade_name = #{tradeName},</if>
+			<if test="memberType != null and memberType != ''">member_type = #{memberType},</if>
+			<if test="spellAbbr != null and spellAbbr != ''">spell_abbr = #{spellAbbr},</if>
+			<if test="nameWb != null and nameWb != ''">name_wb = #{nameWb},</if>
+			<if test="nationalRetailPrice != null and nationalRetailPrice != ''">national_retail_price = #{nationalRetailPrice},</if>
+			<if test="priceType != null and priceType != ''">price_type = #{priceType},</if>
+			<if test="permitNumber != null and permitNumber != ''">permit_number = #{permitNumber},</if>
+			<if test="expiryDate != null and expiryDate != ''">expiry_date = #{expiryDate},</if>
+			<if test="materialSource != null and materialSource != ''">material_source = #{materialSource},</if>
+			<if test="productSource != null and productSource != ''">product_source = #{productSource},</if>
+			<if test="importDrugLicenceNumber != null and importDrugLicenceNumber != ''">import_drug_licence_number = #{importDrugLicenceNumber},</if>
+			<if test="importLicenceExpiryDate != null and importLicenceExpiryDate != ''">import_licence_expiry_date = #{importLicenceExpiryDate},</if>
+			<if test="materialQualityGrade != null and materialQualityGrade != ''">material_quality_grade = #{materialQualityGrade},</if>
+			<if test="gmpFlag != null and gmpFlag != ''">gmp_flag = #{gmpFlag},</if>
+			<if test="highFlag != null and highFlag != ''">high_flag = #{highFlag},</if>
+			<if test="qualityCode != null and qualityCode != ''">quality_code = #{qualityCode},</if>
+			<if test="wrapCode != null and wrapCode != ''">wrap_code = #{wrapCode},</if>
+			<if test="wrapName != null and wrapName != ''">wrap_name = #{wrapName},</if>
+			<if test="wrapDesc != null and wrapDesc != ''">wrap_desc = #{wrapDesc},</if>
+			<if test="newDrugFlag != null and newDrugFlag != ''">new_drug_flag = #{newDrugFlag},</if>
+			<if test="newDrugStartDate != null and newDrugStartDate != ''">new_drug_start_date = #{newDrugStartDate},</if>
+			<if test="newDrugEndDate != null and newDrugEndDate != ''">new_drug_end_date = #{newDrugEndDate},</if>
+			<if test="consignFlag != null and consignFlag != ''">consign_flag = #{consignFlag},</if>
+			<if test="consignCompanyName != null and consignCompanyName != ''">consign_company_name = #{consignCompanyName},</if>
+			<if test="consignExpiryDate != null and consignExpiryDate != ''">consign_expiry_date = #{consignExpiryDate},</if>
+			<if test="generalAgentId != null and generalAgentId != ''">general_agent_id = #{generalAgentId},</if>
+			<if test="generalAgentName != null and generalAgentName != ''">general_agent_name = #{generalAgentName},</if>
+			<if test="middleStandRate != null and middleStandRate != ''">middle_stand_rate = #{middleStandRate},</if>
+			<if test="bigMiddleRate != null and bigMiddleRate != ''">big_middle_rate = #{bigMiddleRate},</if>
+			<if test="useUnit1 != null and useUnit1 != ''">use_unit1 = #{useUnit1},</if>
+			<if test="specUnit != null and specUnit != ''">spec_unit = #{specUnit},</if>
+			<if test="remark != null and remark != ''">remark = #{remark},</if>
+			<if test="checkFlag != null and checkFlag != ''">check_flag = #{checkFlag},</if>
+			<if test="checkRemark != null and checkRemark != ''">check_remark = #{checkRemark},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="productInfoResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from product_info
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="catMark != null and catMark != ''">and cat_mark = #{catMark}</if>
+			<if test="gapCno != null and gapCno != ''">and gap_cno = #{gapCno}</if>
+			<if test="reckonFlag != null and reckonFlag != ''">and reckon_flag = #{reckonFlag}</if>
+			<if test="inputsFlag != null and inputsFlag != ''">and inputs_flag = #{inputsFlag}</if>
+			<if test="dataSource != null and dataSource != ''">and data_source = #{dataSource}</if>
+			<if test="way4 != null and way4 != ''">and way4 = #{way4}</if>
+			<if test="iszystate != null and iszystate != ''">and iszystate = #{iszystate}</if>
+			<if test="basicMedicant != null and basicMedicant != ''">and basic_medicant = #{basicMedicant}</if>
+			<if test="updateContent != null and updateContent != ''">and update_content = #{updateContent}</if>
+			<if test="hospitalId != null and hospitalId != ''">and hospital_id = #{hospitalId}</if>
+			<if test="hospitalName != null and hospitalName != ''">and hospital_name = #{hospitalName}</if>
+			<if test="enableFlag != null and enableFlag != ''">and enable_flag = #{enableFlag}</if>
+			<if test="sourceCountry != null and sourceCountry != ''">and source_country = #{sourceCountry}</if>
+			<if test="synchronizedDate != null and synchronizedDate != ''">and synchronized_date = #{synchronizedDate}</if>
+			<if test="cleanDate != null and cleanDate != ''">and clean_date = #{cleanDate}</if>
+			<if test="createUsername != null and createUsername != ''">and create_username = #{createUsername}</if>
+			<if test="lastUpdateUsername != null and lastUpdateUsername != ''">and last_update_username = #{lastUpdateUsername}</if>
+			<if test="description != null and description != ''">and description = #{description}</if>
+			<if test="lockFlag != null and lockFlag != ''">and lock_flag = #{lockFlag}</if>
+			<if test="archiveNum != null and archiveNum != ''">and archive_num = #{archiveNum}</if>
+			<if test="associateFlag != null and associateFlag != ''">and associate_flag = #{associateFlag}</if>
+			<if test="awardDate != null and awardDate != ''">and award_date = #{awardDate}</if>
+			<if test="originalPermitNumber != null and originalPermitNumber != ''">and original_permit_number = #{originalPermitNumber}</if>
+			<if test="permitDate != null and permitDate != ''">and permit_date = #{permitDate}</if>
+			<if test="url != null and url != ''">and url = #{url}</if>
+			<if test="bigWrap != null and bigWrap != ''">and big_wrap = #{bigWrap}</if>
+			<if test="averageDayEat != null and averageDayEat != ''">and average_day_eat = #{averageDayEat}</if>
+			<if test="importFlag != null and importFlag != ''">and import_flag = #{importFlag}</if>
+			<if test="checkUser != null and checkUser != ''">and check_user = #{checkUser}</if>
+			<if test="checkDate != null and checkDate != ''">and check_date = #{checkDate}</if>
+			<if test="createUser != null and createUser != ''">and create_user = #{createUser}</if>
+			<if test="createDate != null and createDate != ''">and create_date = #{createDate}</if>
+			<if test="createPlat != null and createPlat != ''">and create_plat = #{createPlat}</if>
+			<if test="createOrg != null and createOrg != ''">and create_org = #{createOrg}</if>
+			<if test="lastUpdateUser != null and lastUpdateUser != ''">and last_update_user = #{lastUpdateUser}</if>
+			<if test="lastUpdateDate != null and lastUpdateDate != ''">and last_update_date = #{lastUpdateDate}</if>
+			<if test="lastUpdatePlat != null and lastUpdatePlat != ''">and last_update_plat = #{lastUpdatePlat}</if>
+			<if test="lastUpdateOrg != null and lastUpdateOrg != ''">and last_update_org = #{lastUpdateOrg}</if>
+			<if test="readyFlag != null and readyFlag != ''">and ready_flag = #{readyFlag}</if>
+			<if test="certificateNumber != null and certificateNumber != ''">and certificate_number = #{certificateNumber}</if>
+			<if test="doseageFormName != null and doseageFormName != ''">and doseage_form_name = #{doseageFormName}</if>
+			<if test="userDesc != null and userDesc != ''">and user_desc = #{userDesc}</if>
+			<if test="productClass != null and productClass != ''">and product_class = #{productClass}</if>
+			<if test="insuredDrugType != null and insuredDrugType != ''">and insured_drug_type = #{insuredDrugType}</if>
+			<if test="insuredDrugNubmer != null and insuredDrugNubmer != ''">and insured_drug_nubmer = #{insuredDrugNubmer}</if>
+			<if test="bulletinDrugName != null and bulletinDrugName != ''">and bulletin_drug_name = #{bulletinDrugName}</if>
+			<if test="bulletinModeName != null and bulletinModeName != ''">and bulletin_mode_name = #{bulletinModeName}</if>
+			<if test="bulletinSpec != null and bulletinSpec != ''">and bulletin_spec = #{bulletinSpec}</if>
+			<if test="platType != null and platType != ''">and plat_type = #{platType}</if>
+			<if test="insuranceType != null and insuranceType != ''">and insurance_type = #{insuranceType}</if>
+			<if test="bWrap != null and bWrap != ''">and b_wrap = #{bWrap}</if>
+			<if test="sWrap != null and sWrap != ''">and s_wrap = #{sWrap}</if>
+			<if test="smallestUnits != null and smallestUnits != ''">and smallest_units = #{smallestUnits}</if>
+			<if test="gmpNumber != null and gmpNumber != ''">and gmp_number = #{gmpNumber}</if>
+			<if test="standardsNumber != null and standardsNumber != ''">and standards_number = #{standardsNumber}</if>
+			<if test="foreignFlag != null and foreignFlag != ''">and foreign_flag = #{foreignFlag}</if>
+			<if test="runDate != null and runDate != ''">and run_date = #{runDate}</if>
+			<if test="medicalId != null and medicalId != ''">and medical_id = #{medicalId}</if>
+			<if test="medicalName != null and medicalName != ''">and medical_name = #{medicalName}</if>
+			<if test="medicalType != null and medicalType != ''">and medical_type = #{medicalType}</if>
+			<if test="centerProductLast != null and centerProductLast != ''">and center_product_last = #{centerProductLast}</if>
+			<if test="centerDrugLast != null and centerDrugLast != ''">and center_drug_last = #{centerDrugLast}</if>
+			<if test="centerEnableFlag != null and centerEnableFlag != ''">and center_enable_flag = #{centerEnableFlag}</if>
+			<if test="centerCheckFlag != null and centerCheckFlag != ''">and center_check_flag = #{centerCheckFlag}</if>
+			<if test="normPrice != null and normPrice != ''">and norm_price = #{normPrice}</if>
+			<if test="bidFlag != null and bidFlag != ''">and bid_flag = #{bidFlag}</if>
+			<if test="manufactureName != null and manufactureName != ''">and manufacture_name = #{manufactureName}</if>
+			<if test="medicelFlag != null and medicelFlag != ''">and medicel_flag = #{medicelFlag}</if>
+			<if test="diffPriceFlag != null and diffPriceFlag != ''">and diff_price_flag = #{diffPriceFlag}</if>
+			<if test="diffPriceText != null and diffPriceText != ''">and diff_price_text = #{diffPriceText}</if>
+			<if test="dataUseMax != null and dataUseMax != ''">and data_use_max = #{dataUseMax}</if>
+			<if test="dataUseMin != null and dataUseMin != ''">and data_use_min = #{dataUseMin}</if>
+			<if test="dataNumMax != null and dataNumMax != ''">and data_num_max = #{dataNumMax}</if>
+			<if test="dataNumMin != null and dataNumMin != ''">and data_num_min = #{dataNumMin}</if>
+			<if test="fromCentralData != null and fromCentralData != ''">and from_central_data = #{fromCentralData}</if>
+			<if test="fromTradeFlag != null and fromTradeFlag != ''">and from_trade_flag = #{fromTradeFlag}</if>
+			<if test="categoryBelong != null and categoryBelong != ''">and category_belong = #{categoryBelong}</if>
+			<if test="standardsEditNumber != null and standardsEditNumber != ''">and standards_edit_number = #{standardsEditNumber}</if>
+			<if test="standardsIsFlag != null and standardsIsFlag != ''">and standards_is_flag = #{standardsIsFlag}</if>
+			<if test="gmpEditNumber != null and gmpEditNumber != ''">and gmp_edit_number = #{gmpEditNumber}</if>
+			<if test="gmpIsFlag != null and gmpIsFlag != ''">and gmp_is_flag = #{gmpIsFlag}</if>
+			<if test="permitEditNumber != null and permitEditNumber != ''">and permit_edit_number = #{permitEditNumber}</if>
+			<if test="permitIsFlag != null and permitIsFlag != ''">and permit_is_flag = #{permitIsFlag}</if>
+			<if test="bidFlagEnter != null and bidFlagEnter != ''">and bid_flag_enter = #{bidFlagEnter}</if>
+			<if test="bidBox1 != null and bidBox1 != ''">and bid_box1 = #{bidBox1}</if>
+			<if test="zScore != null and zScore != ''">and z_score = #{zScore}</if>
+			<if test="year1 != null and year1 != ''">and year1 = #{year1}</if>
+			<if test="price1 != null and price1 != ''">and price1 = #{price1}</if>
+			<if test="desc1 != null and desc1 != ''">and desc1 = #{desc1}</if>
+			<if test="year2 != null and year2 != ''">and year2 = #{year2}</if>
+			<if test="price2 != null and price2 != ''">and price2 = #{price2}</if>
+			<if test="desc2 != null and desc2 != ''">and desc2 = #{desc2}</if>
+			<if test="normPriceFrom != null and normPriceFrom != ''">and norm_price_from = #{normPriceFrom}</if>
+			<if test="isJy != null and isJy != ''">and is_jy = #{isJy}</if>
+			<if test="jyDirectory != null and jyDirectory != ''">and jy_directory = #{jyDirectory}</if>
+			<if test="isQc != null and isQc != ''">and is_qc = #{isQc}</if>
+			<if test="isDzjg != null and isDzjg != ''">and is_dzjg = #{isDzjg}</if>
+			<if test="isDdzl != null and isDdzl != ''">and is_ddzl = #{isDdzl}</if>
+			<if test="medicalJyNum != null and medicalJyNum != ''">and medical_jy_num = #{medicalJyNum}</if>
+			<if test="province4 != null and province4 != ''">and province4 = #{province4}</if>
+			<if test="pricetype4 != null and pricetype4 != ''">and pricetype4 = #{pricetype4}</if>
+			<if test="bz4 != null and bz4 != ''">and bz4 = #{bz4}</if>
+			<if test="priceClarify != null and priceClarify != ''">and price_clarify = #{priceClarify}</if>
+			<if test="medicalJyDate != null and medicalJyDate != ''">and medical_jy_date = #{medicalJyDate}</if>
+			<if test="medicalJkNum != null and medicalJkNum != ''">and medical_jk_num = #{medicalJkNum}</if>
+			<if test="medicalJkDate != null and medicalJkDate != ''">and medical_jk_date = #{medicalJkDate}</if>
+			<if test="productionNum != null and productionNum != ''">and production_num = #{productionNum}</if>
+			<if test="productionDate != null and productionDate != ''">and production_date = #{productionDate}</if>
+			<if test="catalogId != null and catalogId != ''">and catalog_id = #{catalogId}</if>
+			<if test="tdFacotry != null and tdFacotry != ''">and td_facotry = #{tdFacotry}</if>
+			<if test="tdProductPrice != null and tdProductPrice != ''">and td_product_price = #{tdProductPrice}</if>
+			<if test="beijingSelect != null and beijingSelect != ''">and beijing_select = #{beijingSelect}</if>
+			<if test="ylyGmp != null and ylyGmp != ''">and yly_gmp = #{ylyGmp}</if>
+			<if test="zycGap != null and zycGap != ''">and zyc_gap = #{zycGap}</if>
+			<if test="productRank != null and productRank != ''">and product_rank = #{productRank}</if>
+			<if test="isPsur != null and isPsur != ''">and is_psur = #{isPsur}</if>
+			<if test="isBad != null and isBad != ''">and is_bad = #{isBad}</if>
+			<if test="badFileNo != null and badFileNo != ''">and bad_file_no = #{badFileNo}</if>
+			<if test="aveDateNum != null and aveDateNum != ''">and ave_date_num = #{aveDateNum}</if>
+			<if test="medicalJyYj != null and medicalJyYj != ''">and medical_jy_yj = #{medicalJyYj}</if>
+			<if test="isDjy != null and isDjy != ''">and is_djy = #{isDjy}</if>
+			<if test="beijingTradeJe != null and beijingTradeJe != ''">and beijing_trade_je = #{beijingTradeJe}</if>
+			<if test="updateFlag != null and updateFlag != ''">and update_flag = #{updateFlag}</if>
+			<if test="linkRemark != null and linkRemark != ''">and link_remark = #{linkRemark}</if>
+			<if test="updateRemark != null and updateRemark != ''">and update_remark = #{updateRemark}</if>
+			<if test="province != null and province != ''">and province = #{province}</if>
+			<if test="ylgmpNo != null and ylgmpNo != ''">and ylgmp_no = #{ylgmpNo}</if>
+			<if test="sfdaLink != null and sfdaLink != ''">and sfda_link = #{sfdaLink}</if>
+			<if test="date2 != null and date2 != ''">and date2 = #{date2}</if>
+			<if test="noPrice != null and noPrice != ''">and no_price = #{noPrice}</if>
+			<if test="updateUser != null and updateUser != ''">and update_user = #{updateUser}</if>
+			<if test="linkDate != null and linkDate != ''">and link_date = #{linkDate}</if>
+			<if test="updateDate != null and updateDate != ''">and update_date = #{updateDate}</if>
+			<if test="selfprice != null and selfprice != ''">and selfprice = #{selfprice}</if>
+			<if test="officialnotice != null and officialnotice != ''">and officialnotice = #{officialnotice}</if>
+			<if test="picsGmp != null and picsGmp != ''">and pics_gmp = #{picsGmp}</if>
+			<if test="priceRightFlag != null and priceRightFlag != ''">and price_right_flag = #{priceRightFlag}</if>
+			<if test="agencyorgdate != null and agencyorgdate != ''">and agencyorgdate = #{agencyorgdate}</if>
+			<if test="useUnit != null and useUnit != ''">and use_unit = #{useUnit}</if>
+			<if test="linkUser != null and linkUser != ''">and link_user = #{linkUser}</if>
+			<if test="catalogIdLx != null and catalogIdLx != ''">and catalog_id_lx = #{catalogIdLx}</if>
+			<if test="noProduce != null and noProduce != ''">and no_produce = #{noProduce}</if>
+			<if test="improtOrgid != null and improtOrgid != ''">and improt_orgid = #{improtOrgid}</if>
+			<if test="inputFlag != null and inputFlag != ''">and input_flag = #{inputFlag}</if>
+			<if test="inputPrice != null and inputPrice != ''">and input_price = #{inputPrice}</if>
+			<if test="inputBz != null and inputBz != ''">and input_bz = #{inputBz}</if>
+			<if test="varPrice != null and varPrice != ''">and var_price = #{varPrice}</if>
+			<if test="reckonPrice != null and reckonPrice != ''">and reckon_price = #{reckonPrice}</if>
+			<if test="priceBz2 != null and priceBz2 != ''">and price_bz2 = #{priceBz2}</if>
+			<if test="priceBz3 != null and priceBz3 != ''">and price_bz3 = #{priceBz3}</if>
+			<if test="minPrice != null and minPrice != ''">and min_price = #{minPrice}</if>
+			<if test="specNd != null and specNd != ''">and spec_nd = #{specNd}</if>
+			<if test="specValue != null and specValue != ''">and spec_value = #{specValue}</if>
+			<if test="beijingPrice != null and beijingPrice != ''">and beijing_price = #{beijingPrice}</if>
+			<if test="year3 != null and year3 != ''">and year3 = #{year3}</if>
+			<if test="desc3 != null and desc3 != ''">and desc3 = #{desc3}</if>
+			<if test="price3 != null and price3 != ''">and price3 = #{price3}</if>
+			<if test="province3 != null and province3 != ''">and province3 = #{province3}</if>
+			<if test="date3 != null and date3 != ''">and date3 = #{date3}</if>
+			<if test="bz3 != null and bz3 != ''">and bz3 = #{bz3}</if>
+			<if test="flag3 != null and flag3 != ''">and flag3 = #{flag3}</if>
+			<if test="affirm3 != null and affirm3 != ''">and affirm3 = #{affirm3}</if>
+			<if test="submit3 != null and submit3 != ''">and submit3 = #{submit3}</if>
+			<if test="jstype3 != null and jstype3 != ''">and jstype3 = #{jstype3}</if>
+			<if test="spec3 != null and spec3 != ''">and spec3 = #{spec3}</if>
+			<if test="dbprice3 != null and dbprice3 != ''">and dbprice3 = #{dbprice3}</if>
+			<if test="submitdate3 != null and submitdate3 != ''">and submitdate3 = #{submitdate3}</if>
+			<if test="catalogArea != null and catalogArea != ''">and catalog_area = #{catalogArea}</if>
+			<if test="clarify != null and clarify != ''">and clarify = #{clarify}</if>
+			<if test="price4 != null and price4 != ''">and price4 = #{price4}</if>
+			<if test="id != null and id != ''">and id = #{id}</if>
+			<if test="dataProductId != null and dataProductId != ''">and data_product_id = #{dataProductId}</if>
+			<if test="categoryId != null and categoryId != ''">and category_id = #{categoryId}</if>
+			<if test="code != null and code != ''">and code = #{code}</if>
+			<if test="code12Id != null and code12Id != ''">and code12_id = #{code12Id}</if>
+			<if test="code16Id != null and code16Id != ''">and code16_id = #{code16Id}</if>
+			<if test="code18Id != null and code18Id != ''">and code18_id = #{code18Id}</if>
+			<if test="doseageFormCode != null and doseageFormCode != ''">and doseage_form_code = #{doseageFormCode}</if>
+			<if test="saltCode != null and saltCode != ''">and salt_code = #{saltCode}</if>
+			<if test="nameChn != null and nameChn != ''">and name_chn = #{nameChn}</if>
+			<if test="nameEng != null and nameEng != ''">and name_eng = #{nameEng}</if>
+			<if test="spellAbbr2 != null and spellAbbr2 != ''">and spell_abbr2 = #{spellAbbr2}</if>
+			<if test="nameWb2 != null and nameWb2 != ''">and name_wb2 = #{nameWb2}</if>
+			<if test="spec != null and spec != ''">and spec = #{spec}</if>
+			<if test="standRate != null and standRate != ''">and stand_rate = #{standRate}</if>
+			<if test="prescription != null and prescription != ''">and prescription = #{prescription}</if>
+			<if test="nationalInsuranceDrug != null and nationalInsuranceDrug != ''">and national_insurance_drug = #{nationalInsuranceDrug}</if>
+			<if test="insuranceNo != null and insuranceNo != ''">and insurance_no = #{insuranceNo}</if>
+			<if test="nationalBasicDrug != null and nationalBasicDrug != ''">and national_basic_drug = #{nationalBasicDrug}</if>
+			<if test="doseageDesc != null and doseageDesc != ''">and doseage_desc = #{doseageDesc}</if>
+			<if test="drugSerialNumber != null and drugSerialNumber != ''">and drug_serial_number = #{drugSerialNumber}</if>
+			<if test="drugProperty != null and drugProperty != ''">and drug_property = #{drugProperty}</if>
+			<if test="wrapUnit != null and wrapUnit != ''">and wrap_unit = #{wrapUnit}</if>
+			<if test="wrapNum != null and wrapNum != ''">and wrap_num = #{wrapNum}</if>
+			<if test="weightUnit != null and weightUnit != ''">and weight_unit = #{weightUnit}</if>
+			<if test="weightNum != null and weightNum != ''">and weight_num = #{weightNum}</if>
+			<if test="contentUnit != null and contentUnit != ''">and content_unit = #{contentUnit}</if>
+			<if test="contentNum != null and contentNum != ''">and content_num = #{contentNum}</if>
+			<if test="archiveNum2 != null and archiveNum2 != ''">and archive_num2 = #{archiveNum2}</if>
+			<if test="criterionType != null and criterionType != ''">and criterion_type = #{criterionType}</if>
+			<if test="criterionNum != null and criterionNum != ''">and criterion_num = #{criterionNum}</if>
+			<if test="manufactureId != null and manufactureId != ''">and manufacture_id = #{manufactureId}</if>
+			<if test="productCode != null and productCode != ''">and product_code = #{productCode}</if>
+			<if test="tradeName != null and tradeName != ''">and trade_name = #{tradeName}</if>
+			<if test="memberType != null and memberType != ''">and member_type = #{memberType}</if>
+			<if test="spellAbbr != null and spellAbbr != ''">and spell_abbr = #{spellAbbr}</if>
+			<if test="nameWb != null and nameWb != ''">and name_wb = #{nameWb}</if>
+			<if test="nationalRetailPrice != null and nationalRetailPrice != ''">and national_retail_price = #{nationalRetailPrice}</if>
+			<if test="priceType != null and priceType != ''">and price_type = #{priceType}</if>
+			<if test="permitNumber != null and permitNumber != ''">and permit_number = #{permitNumber}</if>
+			<if test="expiryDate != null and expiryDate != ''">and expiry_date = #{expiryDate}</if>
+			<if test="materialSource != null and materialSource != ''">and material_source = #{materialSource}</if>
+			<if test="productSource != null and productSource != ''">and product_source = #{productSource}</if>
+			<if test="importDrugLicenceNumber != null and importDrugLicenceNumber != ''">and import_drug_licence_number = #{importDrugLicenceNumber}</if>
+			<if test="importLicenceExpiryDate != null and importLicenceExpiryDate != ''">and import_licence_expiry_date = #{importLicenceExpiryDate}</if>
+			<if test="materialQualityGrade != null and materialQualityGrade != ''">and material_quality_grade = #{materialQualityGrade}</if>
+			<if test="gmpFlag != null and gmpFlag != ''">and gmp_flag = #{gmpFlag}</if>
+			<if test="highFlag != null and highFlag != ''">and high_flag = #{highFlag}</if>
+			<if test="qualityCode != null and qualityCode != ''">and quality_code = #{qualityCode}</if>
+			<if test="wrapCode != null and wrapCode != ''">and wrap_code = #{wrapCode}</if>
+			<if test="wrapName != null and wrapName != ''">and wrap_name = #{wrapName}</if>
+			<if test="wrapDesc != null and wrapDesc != ''">and wrap_desc = #{wrapDesc}</if>
+			<if test="newDrugFlag != null and newDrugFlag != ''">and new_drug_flag = #{newDrugFlag}</if>
+			<if test="newDrugStartDate != null and newDrugStartDate != ''">and new_drug_start_date = #{newDrugStartDate}</if>
+			<if test="newDrugEndDate != null and newDrugEndDate != ''">and new_drug_end_date = #{newDrugEndDate}</if>
+			<if test="consignFlag != null and consignFlag != ''">and consign_flag = #{consignFlag}</if>
+			<if test="consignCompanyName != null and consignCompanyName != ''">and consign_company_name = #{consignCompanyName}</if>
+			<if test="consignExpiryDate != null and consignExpiryDate != ''">and consign_expiry_date = #{consignExpiryDate}</if>
+			<if test="generalAgentId != null and generalAgentId != ''">and general_agent_id = #{generalAgentId}</if>
+			<if test="generalAgentName != null and generalAgentName != ''">and general_agent_name = #{generalAgentName}</if>
+			<if test="middleStandRate != null and middleStandRate != ''">and middle_stand_rate = #{middleStandRate}</if>
+			<if test="bigMiddleRate != null and bigMiddleRate != ''">and big_middle_rate = #{bigMiddleRate}</if>
+			<if test="useUnit1 != null and useUnit1 != ''">and use_unit1 = #{useUnit1}</if>
+			<if test="specUnit != null and specUnit != ''">and spec_unit = #{specUnit}</if>
+			<if test="remark != null and remark != ''">and remark = #{remark}</if>
+			<if test="checkFlag != null and checkFlag != ''">and check_flag = #{checkFlag}</if>
+			<if test="checkRemark != null and checkRemark != ''">and check_remark = #{checkRemark}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="productInfoResultMap" parameterType="com.gyguohua.model..ProductInfo">
+		select <include refid="table_columns" />
+		from product_info
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

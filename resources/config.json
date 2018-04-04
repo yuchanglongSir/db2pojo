@@ -1,0 +1,75 @@
+{
+	"project" 			: "gyguohua",
+	
+	"author" 			: "yuchanglong",
+	
+	"group"				: "dataGroup",
+	
+	"dbConfig" : {
+		"driverClass" 	: "",
+		"username" 		: "",
+		"password" 		: "",
+		"url" 			: ""
+	}, 
+	
+	"ignorePrefix" : "t_",
+	
+	"groups" : [{
+			"name" 	 : "system",
+			"prefix" : "sys"
+		}, {
+			"name" 	 : "student",
+			"prefix" : "student"
+	},{
+			"name"   : "auth",
+			"prefix" : "auth"
+	},{
+			"name"   : "pay",
+			"prefix" : "pay"
+	},{
+			"name"   : "user",
+			"prefix" : "user"
+	},{
+			"name"   : "commodity",
+			"prefix" : "commodity"
+	},{
+			"name"   : "attr",
+			"prefix" : "attr"
+	},{
+			"name"   : "order",
+			"prefix" : "order"
+	},{
+			"name"   : "question",
+			"prefix" : "question"
+	}
+	],
+	
+	"templateDir" : "resources/template/ssm3/",
+	
+	"mappings" : [{
+			"template"	:	"pojo.ftl",
+			"dir"		:	"com/${project}/${model}"
+		},{
+			"template"	:	"controller.ftl",
+			"dir"		:	"com/${project}/${model}/controller",
+			"rpadding"	:	"Controller"
+		}, {
+			"template"	:	"service_impl.ftl",
+			"dir"		:	"com/${project}/${model}/impl",
+			"rpadding"	:	"ServiceImpl"
+		}, {
+			"template"	:	"service_spi.ftl",
+			"dir"		:	"com/${project}/${model}/api",
+			"lpadding"	:	"I",
+			"rpadding"	:	"Service"
+		}, {
+			"template"	:	"mybatis_xml.ftl",
+			"dir"		:	"com/${project}/${model}/xml",
+			"rpadding"	:	"Mapper",
+			"suffix"	:	"xml"
+		}, {
+			"template"	:	"mapper.ftl",
+			"dir"		:	"com/${project}/${model}/mapper",
+			"rpadding"	:	"Mapper"
+		}]
+}

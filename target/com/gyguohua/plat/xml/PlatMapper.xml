@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua..mapper.PlatMapper">
+	<resultMap type="com.gyguohua.model..Plat" id="platResultMap">
+		<result property="platId" column="plat_id" />
+		<result property="platFather" column="plat_father" />
+		<result property="platClass" column="plat_class" />
+		<result property="platGrade" column="plat_grade" />
+		<result property="platName" column="plat_name" />
+		<result property="platLevel" column="plat_level" />
+		<result property="platDesc" column="plat_desc" />
+		<result property="platRoot" column="plat_root" />
+		<result property="platCode" column="plat_code" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		plat_id,
+		plat_father,
+		plat_class,
+		plat_grade,
+		plat_name,
+		plat_level,
+		plat_desc,
+		plat_root,
+		plat_code
+    </sql>
+	<sql id="entity_properties">
+		#{platId,jdbcType=CHAR},
+		#{platFather,jdbcType=CHAR},
+		#{platClass,jdbcType=CHAR},
+		#{platGrade,jdbcType=DOUBLE},
+		#{platName,jdbcType=VARCHAR},
+		#{platLevel,jdbcType=VARCHAR},
+		#{platDesc,jdbcType=VARCHAR},
+		#{platRoot,jdbcType=CHAR},
+		#{platCode,jdbcType=VARCHAR}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.platId,jdbcType=CHAR},
+		#{item.platFather,jdbcType=CHAR},
+		#{item.platClass,jdbcType=CHAR},
+		#{item.platGrade,jdbcType=DOUBLE},
+		#{item.platName,jdbcType=VARCHAR},
+		#{item.platLevel,jdbcType=VARCHAR},
+		#{item.platDesc,jdbcType=VARCHAR},
+		#{item.platRoot,jdbcType=CHAR},
+		#{item.platCode,jdbcType=VARCHAR}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		plat_father,
+		plat_class,
+		plat_grade,
+		plat_name,
+		plat_level,
+		plat_desc,
+		plat_root,
+		plat_code
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{platFather,jdbcType=CHAR},
+		#{platClass,jdbcType=CHAR},
+		#{platGrade,jdbcType=DOUBLE},
+		#{platName,jdbcType=VARCHAR},
+		#{platLevel,jdbcType=VARCHAR},
+		#{platDesc,jdbcType=VARCHAR},
+		#{platRoot,jdbcType=CHAR},
+		#{platCode,jdbcType=VARCHAR}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.platFather,jdbcType=CHAR},
+		#{item.platClass,jdbcType=CHAR},
+		#{item.platGrade,jdbcType=DOUBLE},
+		#{item.platName,jdbcType=VARCHAR},
+		#{item.platLevel,jdbcType=VARCHAR},
+		#{item.platDesc,jdbcType=VARCHAR},
+		#{item.platRoot,jdbcType=CHAR},
+		#{item.platCode,jdbcType=VARCHAR}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model..Plat" useGeneratedKeys="true" keyProperty="id">
+		insert into t_plat( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into t_plat( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from t_plat
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from t_plat
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model..Plat">
+		update t_plat 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="platFather != null and platFather != ''">plat_father = #{platFather},</if>
+			<if test="platClass != null and platClass != ''">plat_class = #{platClass},</if>
+			<if test="platGrade != null and platGrade != ''">plat_grade = #{platGrade},</if>
+			<if test="platName != null and platName != ''">plat_name = #{platName},</if>
+			<if test="platLevel != null and platLevel != ''">plat_level = #{platLevel},</if>
+			<if test="platDesc != null and platDesc != ''">plat_desc = #{platDesc},</if>
+			<if test="platRoot != null and platRoot != ''">plat_root = #{platRoot},</if>
+			<if test="platCode != null and platCode != ''">plat_code = #{platCode},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="platResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from t_plat
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="platFather != null and platFather != ''">and plat_father = #{platFather}</if>
+			<if test="platClass != null and platClass != ''">and plat_class = #{platClass}</if>
+			<if test="platGrade != null and platGrade != ''">and plat_grade = #{platGrade}</if>
+			<if test="platName != null and platName != ''">and plat_name = #{platName}</if>
+			<if test="platLevel != null and platLevel != ''">and plat_level = #{platLevel}</if>
+			<if test="platDesc != null and platDesc != ''">and plat_desc = #{platDesc}</if>
+			<if test="platRoot != null and platRoot != ''">and plat_root = #{platRoot}</if>
+			<if test="platCode != null and platCode != ''">and plat_code = #{platCode}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="platResultMap" parameterType="com.gyguohua.model..Plat">
+		select <include refid="table_columns" />
+		from t_plat
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gyguohua..mapper.ViewQualificationMapper">
+	<resultMap type="com.gyguohua.model..ViewQualification" id="viewQualificationResultMap">
+		<result property="id" column="id" />
+		<result property="createDate" column="create_date" />
+		<result property="mName" column="m_name" />
+		<result property="baseInfoUserName" column="base_info_user_name" />
+		<result property="baseInfoDate" column="base_info_date" />
+		<result property="auditUserName" column="audit_user_name" />
+		<result property="auditDate" column="audit_date" />
+		<result property="clarifyClag" column="clarify_clag" />
+		<result property="talkName" column="talk_name" />
+		<result property="talkContent" column="talk_content" />
+		<result property="talkDate" column="talk_date" />
+		<result property="talkOrg" column="talk_org" />
+		<result property="replyFlag" column="reply_flag" />
+		<result property="replyUser" column="reply_user" />
+		<result property="replyContent" column="reply_content" />
+		<result property="fDate" column="f_date" />
+	</resultMap>
+	
+	<sql id="table_columns">
+		id,
+		create_date,
+		m_name,
+		base_info_user_name,
+		base_info_date,
+		audit_user_name,
+		audit_date,
+		clarify_clag,
+		talk_name,
+		talk_content,
+		talk_date,
+		talk_org,
+		reply_flag,
+		reply_user,
+		reply_content,
+		f_date
+    </sql>
+	<sql id="entity_properties">
+		#{id,jdbcType=VARCHAR},
+		#{createDate,jdbcType=DATE},
+		#{mName,jdbcType=VARCHAR},
+		#{baseInfoUserName,jdbcType=VARCHAR},
+		#{baseInfoDate,jdbcType=DATE},
+		#{auditUserName,jdbcType=VARCHAR},
+		#{auditDate,jdbcType=DATE},
+		#{clarifyClag,jdbcType=VARCHAR},
+		#{talkName,jdbcType=VARCHAR},
+		#{talkContent,jdbcType=VARCHAR},
+		#{talkDate,jdbcType=DATE},
+		#{talkOrg,jdbcType=VARCHAR},
+		#{replyFlag,jdbcType=VARCHAR},
+		#{replyUser,jdbcType=VARCHAR},
+		#{replyContent,jdbcType=VARCHAR},
+		#{fDate,jdbcType=DATE}
+	</sql>
+	<sql id="batch_entity_properties">
+		#{item.id,jdbcType=VARCHAR},
+		#{item.createDate,jdbcType=DATE},
+		#{item.mName,jdbcType=VARCHAR},
+		#{item.baseInfoUserName,jdbcType=VARCHAR},
+		#{item.baseInfoDate,jdbcType=DATE},
+		#{item.auditUserName,jdbcType=VARCHAR},
+		#{item.auditDate,jdbcType=DATE},
+		#{item.clarifyClag,jdbcType=VARCHAR},
+		#{item.talkName,jdbcType=VARCHAR},
+		#{item.talkContent,jdbcType=VARCHAR},
+		#{item.talkDate,jdbcType=DATE},
+		#{item.talkOrg,jdbcType=VARCHAR},
+		#{item.replyFlag,jdbcType=VARCHAR},
+		#{item.replyUser,jdbcType=VARCHAR},
+		#{item.replyContent,jdbcType=VARCHAR},
+		#{item.fDate,jdbcType=DATE}
+	</sql>
+	
+	<sql id="table_columns_no_id">
+		create_date,
+		m_name,
+		base_info_user_name,
+		base_info_date,
+		audit_user_name,
+		audit_date,
+		clarify_clag,
+		talk_name,
+		talk_content,
+		talk_date,
+		talk_org,
+		reply_flag,
+		reply_user,
+		reply_content,
+		f_date
+    </sql>
+	<sql id="entity_properties_no_id">
+		#{createDate,jdbcType=DATE},
+		#{mName,jdbcType=VARCHAR},
+		#{baseInfoUserName,jdbcType=VARCHAR},
+		#{baseInfoDate,jdbcType=DATE},
+		#{auditUserName,jdbcType=VARCHAR},
+		#{auditDate,jdbcType=DATE},
+		#{clarifyClag,jdbcType=VARCHAR},
+		#{talkName,jdbcType=VARCHAR},
+		#{talkContent,jdbcType=VARCHAR},
+		#{talkDate,jdbcType=DATE},
+		#{talkOrg,jdbcType=VARCHAR},
+		#{replyFlag,jdbcType=VARCHAR},
+		#{replyUser,jdbcType=VARCHAR},
+		#{replyContent,jdbcType=VARCHAR},
+		#{fDate,jdbcType=DATE}
+	</sql>
+	<sql id="batch_entity_properties_no_id">
+		#{item.createDate,jdbcType=DATE},
+		#{item.mName,jdbcType=VARCHAR},
+		#{item.baseInfoUserName,jdbcType=VARCHAR},
+		#{item.baseInfoDate,jdbcType=DATE},
+		#{item.auditUserName,jdbcType=VARCHAR},
+		#{item.auditDate,jdbcType=DATE},
+		#{item.clarifyClag,jdbcType=VARCHAR},
+		#{item.talkName,jdbcType=VARCHAR},
+		#{item.talkContent,jdbcType=VARCHAR},
+		#{item.talkDate,jdbcType=DATE},
+		#{item.talkOrg,jdbcType=VARCHAR},
+		#{item.replyFlag,jdbcType=VARCHAR},
+		#{item.replyUser,jdbcType=VARCHAR},
+		#{item.replyContent,jdbcType=VARCHAR},
+		#{item.fDate,jdbcType=DATE}
+	</sql>
+	
+	<!-- 适用于主键自增类型 -->
+	<insert id="insert" parameterType="com.gyguohua.model..ViewQualification" useGeneratedKeys="true" keyProperty="id">
+		insert into view_qualification( <include refid="table_columns_no_id" /> ) 
+		values ( <include refid="entity_properties_no_id" /> )
+	</insert>
+	
+	<!-- 批量添加 适用于主键自增类型  不支持返回主键-->
+	<insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true">
+		insert into view_qualification( <include refid="table_columns_no_id" /> ) 
+		values 
+		<foreach item="item" collection="list" separator="," >
+			( <include refid="batch_entity_properties_no_id" /> )
+		</foreach>
+	</insert>
+	
+	<!--根据主键删除 -->
+	<delete id="deleteById">
+		delete from view_qualification
+		where id = #{id}
+	</delete>
+	
+	<!-- 根据ID批量删除 -->
+	<delete id="deleteByIds">
+		delete from view_qualification
+		where id in
+		<foreach item="item" collection="array" open="(" separator="," close=")">
+			'${item}'
+		</foreach>
+	</delete>
+	
+	<update id="update" parameterType="com.gyguohua.model..ViewQualification">
+		update view_qualification 
+		<trim prefix="set" suffixOverrides=",">
+			<if test="createDate != null and createDate != ''">create_date = #{createDate},</if>
+			<if test="mName != null and mName != ''">m_name = #{mName},</if>
+			<if test="baseInfoUserName != null and baseInfoUserName != ''">base_info_user_name = #{baseInfoUserName},</if>
+			<if test="baseInfoDate != null and baseInfoDate != ''">base_info_date = #{baseInfoDate},</if>
+			<if test="auditUserName != null and auditUserName != ''">audit_user_name = #{auditUserName},</if>
+			<if test="auditDate != null and auditDate != ''">audit_date = #{auditDate},</if>
+			<if test="clarifyClag != null and clarifyClag != ''">clarify_clag = #{clarifyClag},</if>
+			<if test="talkName != null and talkName != ''">talk_name = #{talkName},</if>
+			<if test="talkContent != null and talkContent != ''">talk_content = #{talkContent},</if>
+			<if test="talkDate != null and talkDate != ''">talk_date = #{talkDate},</if>
+			<if test="talkOrg != null and talkOrg != ''">talk_org = #{talkOrg},</if>
+			<if test="replyFlag != null and replyFlag != ''">reply_flag = #{replyFlag},</if>
+			<if test="replyUser != null and replyUser != ''">reply_user = #{replyUser},</if>
+			<if test="replyContent != null and replyContent != ''">reply_content = #{replyContent},</if>
+			<if test="fDate != null and fDate != ''">f_date = #{fDate},</if>
+		</trim>
+		<where>id = #{id}</where>
+	</update>
+	
+	<select id="findById" resultMap="viewQualificationResultMap" parameterType="String" >
+		select <include refid="table_columns" />
+		from view_qualification
+		where id = #{id}
+	</select>
+	
+	<sql id="page_where">
+		<trim prefix="where" prefixOverrides="and | or ">
+			<if test="createDate != null and createDate != ''">and create_date = #{createDate}</if>
+			<if test="mName != null and mName != ''">and m_name = #{mName}</if>
+			<if test="baseInfoUserName != null and baseInfoUserName != ''">and base_info_user_name = #{baseInfoUserName}</if>
+			<if test="baseInfoDate != null and baseInfoDate != ''">and base_info_date = #{baseInfoDate}</if>
+			<if test="auditUserName != null and auditUserName != ''">and audit_user_name = #{auditUserName}</if>
+			<if test="auditDate != null and auditDate != ''">and audit_date = #{auditDate}</if>
+			<if test="clarifyClag != null and clarifyClag != ''">and clarify_clag = #{clarifyClag}</if>
+			<if test="talkName != null and talkName != ''">and talk_name = #{talkName}</if>
+			<if test="talkContent != null and talkContent != ''">and talk_content = #{talkContent}</if>
+			<if test="talkDate != null and talkDate != ''">and talk_date = #{talkDate}</if>
+			<if test="talkOrg != null and talkOrg != ''">and talk_org = #{talkOrg}</if>
+			<if test="replyFlag != null and replyFlag != ''">and reply_flag = #{replyFlag}</if>
+			<if test="replyUser != null and replyUser != ''">and reply_user = #{replyUser}</if>
+			<if test="replyContent != null and replyContent != ''">and reply_content = #{replyContent}</if>
+			<if test="fDate != null and fDate != ''">and f_date = #{fDate}</if>
+		</trim>
+	</sql>
+	
+	<select id="findAll" resultMap="viewQualificationResultMap" parameterType="com.gyguohua.model..ViewQualification">
+		select <include refid="table_columns" />
+		from view_qualification
+		<include refid="page_where" />
+	</select>
+	
+	<!-- 其他自定义SQL -->
+	
+</mapper>

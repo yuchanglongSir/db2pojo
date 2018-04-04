@@ -1,0 +1,47 @@
+{
+	"project" 			: "video",
+	
+	"author" 			: "yuchanglong",
+	
+	"dbConfig" : {
+		"driverClass" 	: "",
+		"username" 		: "",
+		"password" 		: "",
+		"url" 			: ""
+	}, 
+	
+	"ignorePrefix" : "t_,m_",
+	
+	"templateDir" : "resources/template/ssi/",
+	
+	"mappings" : [{
+			"template"	:	"action.ftl",
+			"dir"		:	"com/${project}/${model}/action",
+			"rpadding"	:	"Action"
+		}, {
+			"template"	:	"pojo.ftl",
+			"dir"		:	"com/${project}/${model}/pojo"
+		}, {
+			"template"	:	"search.ftl",
+			"dir"		:	"com/${project}/${model}/search",
+			"rpadding"	:	"Search"
+		}, {
+			"template"	:	"service_impl.ftl",
+			"dir"		:	"com/${project}/${model}/service",
+			"rpadding"	:	"ServiceImpl"
+		}, {
+			"template"	:	"service_spi.ftl",
+			"dir"		:	"com/${project}/${model}/service/spi",
+			"lpadding"	:	"I",
+			"rpadding"	:	"Service"
+		}, {
+			"template"	:	"ibatis_xml.ftl",
+			"dir"		:	"mapper",
+			"suffix"	:	"xml"
+		}, {
+			"template"	:	"junit_test.ftl",
+			"dir"		:	"test/com/${project}/${model}",
+			"packagePath":	"com.${project}.${model}",
+			"rpadding"	:	"Test"
+	}]
+}
