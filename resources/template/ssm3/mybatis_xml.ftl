@@ -79,7 +79,12 @@
 		update ${table_name} 
 		<trim prefix="set" suffixOverrides=",">
 		<#list table_column as c><#if (c_index>=1)>
-			<if test="${c.nameJ} != null and ${c.nameJ} != ''">${c.name} = ${r"#"}{${c.nameJ}},</if>
+			<#if c.sqlType != 'DATE'>
+				<if test="${c.nameJ} != null and ${c.nameJ} != ''">${c.name} = ${r"#"}{${c.nameJ}},</if>
+			</#if>
+			<#if c.sqlType == 'DATE'>
+				<if test="${c.nameJ} != null">${c.name} = ${r"#"}{${c.nameJ}},</if>
+			</#if>
 		</#if></#list>
 		</trim>
 		<where>id = ${r"#"}{id}</where>
