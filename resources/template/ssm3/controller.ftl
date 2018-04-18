@@ -40,6 +40,18 @@ public class ${class_name}Controller {
 	public List<${class_name}> getList(${class_name} search){
 		return ${class_name?uncap_first}ServiceImpl.find${class_name}All(search);
 	}
+
+	/**
+     * 注解
+     *
+     */
+    @ApiOperation("xxx查询详情接口")
+    @GetMapping(value = "/find${class_name}ById")
+	public ${class_name} find${class_name}ById(String id){
+		return ${class_name?uncap_first}ServiceImpl.find${class_name}ById(id);
+	}
+
+
 	/**
      * 注解
      *
