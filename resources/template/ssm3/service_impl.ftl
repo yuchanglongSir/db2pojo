@@ -33,9 +33,10 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	* @user by ${author}
 	 */
 	@Override
+	@Transactional(rollbackFor = Exception.class)
 	public void insert${class_name}(${class_name} entity){
 		${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.insert(entity);
-	};
+	}
 	
 	/**
 	* 批量新增${class_name}
@@ -46,9 +47,10 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	* @user by ${author}
 	 */
 	@Override
+	@Transactional(rollbackFor = Exception.class)
 	public void batchInsert${class_name}(List<${class_name}> entity){
 		${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.batchInsert(entity);
-	};
+	}
 	
 	/**
 	* 编辑${class_name}
@@ -59,9 +61,10 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	* @user by ${author}
 	 */
 	@Override
+	@Transactional(rollbackFor = Exception.class)
 	public void update${class_name}(${class_name} entity){
 		${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.update(entity);
-	};
+	}
 	
 	/**
 	* 根据id删除${class_name}
@@ -72,9 +75,10 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	* @user by ${author}
 	 */
 	 @Override
+	 @Transactional(rollbackFor = Exception.class)
 	public void delete${class_name}ById(String id){
 		${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.deleteById(id);
-	};
+	}
 	
 	/**
 	* 根据id批量删除${class_name}
@@ -85,12 +89,13 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	* @user by ${author}
 	 */
 	@Override
+	@Transactional(rollbackFor = Exception.class)
 	public void delete${class_name}ByIds(String ids){
 		if (ids != null && !("").equals(ids)) {
             String[] idsArr = ids.split(",");
             ${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.deleteByIds(idsArr);
         }
-	};
+	}
 	
 	/**
 	* 根据id查询
@@ -103,7 +108,7 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	@Override
 	public ${class_name} find${class_name}ById(String id){
 		return ${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.findById(id);
-	};
+	}
 	
 	/**
 	* 查询全部
@@ -115,6 +120,6 @@ public class ${class_name}ServiceImpl implements I${class_name}Service {
 	@Override
 	public List<${class_name}> find${class_name}All(${class_name} search){
 		return ${class_name?substring(0,1)?lower_case}${class_name?substring(1)}Mapper.findAll(search);
-	};
+	}
 	
 }

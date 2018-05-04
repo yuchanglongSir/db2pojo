@@ -6,10 +6,10 @@
 	"group"				: "dataGroup",
 	
 	"dbConfig" : {
-		"driverClass" 	: "",
-		"username" 		: "",
-		"password" 		: "",
-		"url" 			: ""
+		"driverClass" 	: "oracle.jdbc.driver.OracleDriver",
+		"username" 		: "hn_data_auditing_test",
+		"password" 		: "hn_data_auditing_test",
+		"url" 			: "jdbc:oracle:thin:@222.130.18.148:1521:orcl"
 	}, 
 	
 	"ignorePrefix" : "t_",
